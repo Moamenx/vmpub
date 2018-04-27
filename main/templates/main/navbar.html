@@ -1,0 +1,35 @@
+{% load static %}
+{% block navbar %}
+        <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src='{% static 'images/logo.png' %}' alt='logo' class='img-fluid' />
+        </div>
+        <div class="search">
+            <form action="" method="">
+                <input type="search" name='filter' class='' />
+            </form>
+        </div>
+        <div class="lhs">
+            <i class='fa fa-heart'></i>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+   <!-- Nav -->
+    <div class="navigation">
+        <div class="container">
+            <ul class='list-unstyled'>
+                <li>Home</li>
+                <li>Impression</li>
+                <li>Catalog</li>
+                <li>Categories</li>
+                <li>Contact us</li>
+                <li>About us</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Nav -->
+
+{% endblock %}

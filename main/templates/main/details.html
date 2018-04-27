@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Default</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- JQuery UI -->
+    <link rel='stylesheet' href='css/jquery-ui.structure.min.css' />
+    <link rel='stylesheet' href='css/jquery-ui.theme.min.css' />
+    <link rel='stylesheet' href='css/jquery-ui.min.css' />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src='images/logo.png' alt='logo' class='img-fluid' />
+        </div>
+        <div class="search">
+            <form action="" method="">
+                <input type="search" name='filter' class='' />
+            </form>
+        </div>
+        <div class="lhs">
+            <i class='fa fa-heart'></i>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <!-- Contact Details -->
+    <div class='details'>
+        <div class="container">
+            <div class='row'>
+                <div class='col-md-6'>
+                    <div id="map" style="width:100%;height:500px;background:yellow"></div>
+                </div>
+                <div class='col-md-6'>
+                    <ul class='list-unstyled info'>
+                        <li><span>Email: </span>info@vmpub.ch</li>
+                        <li><span>Email: </span>isiskhersto@hotmail.com</li>
+                        <li><span>Phone: </span>+79.644.83.12</li>
+                        <li><span>Tél: </span>022.300.52.25</li>
+                        <li><span>Fax: </span>022.300.52.26</li>
+                        <li><span>Kheresto Isis</span> 35 route de la</li>
+                        <li><span>Chapelle</span> 1212 GRAND-LANCY</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Details -->
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; All Right Reversed for VMP &reg;</p>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- Javascript Tooltip library -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(51.5, -0.12),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+    <script src='js/plugins.js'></script>
+</body>
+
+</html>
