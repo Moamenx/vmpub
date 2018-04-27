@@ -240,8 +240,9 @@ footer
 /* =================================== CATEGORY PAGE =================================== */
 
 /* =================================== PRODUCT PAGE =================================== */
-.product-page{overflow: hidden;padding: 100px 0}
+.product-page{overflow: hidden;padding: 160px 0}
 .product-page .row .col-md-8{padding: 0 !important}
+.product-page .row .col-md-8 .desc{color: #FFF}
 .product-page .row .col-md-4{padding: 0 !important}
 .product-page .window .product .image{margin-bottom: 20px;border: 1px solid #333}
 .product-page .shuffle li
@@ -259,7 +260,7 @@ footer
 {
     background: #171717;
     color: #FFF;
-    padding: 20px;   
+    padding: 20px;
     border: 1px solid #555
 }
 .details ul li
@@ -276,7 +277,7 @@ footer
 .details ul li span
 {
     font-weight: bold;
-    font-size: 0.9rem;    
+    font-size: 0.9rem;
     color: #FFF
 }
 /* =================================== DETAILS PAGE =================================== */
@@ -298,7 +299,8 @@ footer
     width: 100%;
     margin-bottom: 15px;
     color: #F6F6F6;
-    outline: none
+    outline: none;
+    resize: none
 }
 .contact-form input,
 .contact-form .form-group,
@@ -318,11 +320,23 @@ footer
 {
    padding: 60px 0
 }
-.impression > .type{margin-bottom: 20px}
-.impression marquee{margin-top: 20px}
+.impression .start{margin: 30px 0 70px 0; color: #FFF}
+.impression .type {color: #FFF;margin-bottom: 15px}
+.impression .type h4{font-size: 1.3rem}
+.impression .type p
+{
+    font-size: .8rem;
+}
+.impression .type .image
+{
+    border: 1px solid #FFF;
+    padding: 2px;
+}
+.impression marquee{margin-top: 20px;color: #FFF}
 /* =================================== IMPRESSION PAGE =================================== */
 
 /* =================================== CATALOG PAGE =================================== */
-.catalog{padding: 100px 0}
+.catalog{padding: 160px 0}
 .catalog .row{margin-bottom: 25px}
+.catalog .row .text{color: #FFF}
 /* =================================== CATALOG PAGE =================================== */

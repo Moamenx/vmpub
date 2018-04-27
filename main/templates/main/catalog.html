@@ -1,64 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "main/base.html" %}
+{% block content %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title -->
-    <title>Default</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- JQuery UI -->
-    <link rel='stylesheet' href='css/jquery-ui.structure.min.css' />
-    <link rel='stylesheet' href='css/jquery-ui.theme.min.css' />
-    <link rel='stylesheet' href='css/jquery-ui.min.css' />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/stylesheet.css" />
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <img src='images/logo.png' alt='logo' class='img-fluid' />
-        </div>
-        <div class="search">
-            <form action="" method="">
-                <input type="search" name='filter' class='' />
-            </form>
-        </div>
-        <div class="lhs">
-            <i class='fa fa-heart'></i>
-        </div>
-    </nav>
-    <!-- Navigation -->
-    
-    <!-- Nav -->
-    <div class="navigation">
-        <div class="container">
-            <ul class='list-unstyled main'>
-                <li><a href='index.html'>Home</a></li>
-                <li><a href='impression.html'>Impression</a></li>
-                <li><a href='catalog.html'>Catalog</a></li>
-                <li class='cat-link'>
-                    <a href='category.html'>Categories</a>
-                    <ul class='list-unstyled sup-menu'>
-                        <li><a href='category.html'>Category1</a></li>
-                        <li><a href='category.html'>Category2</a></li>
-                        <li><a href='category.html'>Category3</a></li>
-                    </ul>
-                </li>
-                <li><a href='contact.html'>Contact us</a></li>
-                <li><a href='details.html'>About us</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- Nav -->
-    
     <!-- Catalog -->
     <div class="catalog">
         <div class="container">
@@ -90,20 +32,4 @@
     </div>
     <!-- Catalog -->
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright &copy; All Right Reversed for VMP &reg;</p>
-    </footer>
-    <!-- Footer -->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <!-- Javascript Tooltip library -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src='js/plugins.js'></script>
-</body>
-
-</html>
+{% endblock %}

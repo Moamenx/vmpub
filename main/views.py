@@ -44,7 +44,31 @@ class AboutView(View):
 
         context = {'categories': get_categories(), 'news': get_news()}
         return render(request, 'main/about.html', context)
+    
+class DetailsView(View):
+    template_name = 'main/details.html'
 
+    def get(self, request):
+
+        context = {'categories': get_categories(), 'news': get_news()}
+        return render(request, 'main/details.html', context)
+
+
+class ImpressionView(View):
+    template_name = 'main/impression.html'
+
+    def get(self, request):
+
+        context = {'categories': get_categories(), 'news': get_news()}
+        return render(request, 'main/impression.html', context)
+
+class CatalogView(View):
+    template_name = 'main/catalog.html'
+
+    def get(self, request):
+
+        context = {'categories': get_categories(), 'news': get_news()}
+        return render(request, 'main/catalog.html', context)
 
 class ContactUsView(View):
     template_name = 'main/contact.html'
@@ -71,28 +95,12 @@ class ContactUsView(View):
 class CategoryView(View):
     template_name = 'main/category.html'
 
-    def get(self, request, cat_name):
-        category_name = cat_name.replace('-', ' ')
-        category = Category()
-        try:
-            category = Category.objects.get(name=category_name)
-        except Category.DoesNotExist:
-            category = None
-        try:
-            products = Product.objects.all().filter(category=category)
+    def get(self, request):
 
-        except Product.DoesNotExist:
-            products = None
-
-
-        context = {'categoryurl': cat_name, 'products': products, 'categoryName': category_name,
-                   'categories': get_categories(),
-                   'active': 'active', 'news': get_news(), }
-
-        return render(request, 'main/category.html', context)
+        return render(request, 'main/category.html')
 
 class ProductView(View):
     template_name = 'main/product.html'
 
     def get(self,request):
-        return render(request, 'main/product.html.html')
+        return render(request, 'main/product.html')
