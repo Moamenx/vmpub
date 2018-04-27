@@ -6,6 +6,7 @@ $(function () {
 
     var subnav = $(".subnav"),
         nav = $("nav"),
+        navigation = $(".navigation"),
         catSection = $(".categories-links");
 
     $(window).on("scroll", function () {
@@ -24,6 +25,8 @@ $(function () {
             subnav.find('i').removeClass('fixed');
         }
     });
+    
+    navigation.css("top", nav.innerHeight());
     
     /*$(".product-page .window .product .image img").resizable({
         containment: "#holder",

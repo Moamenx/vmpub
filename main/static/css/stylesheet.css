@@ -6,32 +6,206 @@
     -o-box-sizing: border-box;
     box-sizing: border-box;
 }
-body{background: #FFF}
+body
+{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #272727, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #272727, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 /* Global */
 
 /* Nav */
 nav
 {
-    background: #CCC;
+    /*background: #990000;*/
+    background: #A50000;
     display: flex;
-    justify-content: space-around;  
+    justify-content: space-evenly;  
     position: fixed;
     width: 100%;
-    z-index: 12
+    z-index: 12;
+    padding: 12px 0
 }
 nav .logo{width: 45px}
+nav .search
+{
+    width: 45%
+}
+nav form{position: relative}
+nav .search form input[type='search']
+{
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #F5F5F5;    
+    color:#555;
+    font-size: .9rem
+}
+::placeholder{color: #d4d4d4;font-size: 1rem}
+nav .search form input[type='submit']
+{
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    background: #ccc;  
+    cursor: pointer
+}
 /* Nav */
 
+/* Navigation */
+.navigation
+{
+    position: fixed;
+    width: 100%;
+    top: 47px;
+    background: #131313;
+    z-index: 12;    
+}
+.navigation .main{display: flex;justify-content: space-around;margin: 0;}
+.navigation ul li
+{
+    padding: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 3px;   
+}
+.navigation ul .cat-link
+{
+    position: relative
+}
+.navigation ul.sup-menu
+{
+    position: absolute;
+    background: #212121;
+    width: 150px;
+    top: 30px;
+    padding: 8px 0;
+    display: none;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+.navigation ul .cat-link:hover .sup-menu
+{
+    display: block
+}
+.navigation ul.sup-menu li{padding: 5px 0 8px 10px}
+.navigation ul.sup-menu li:hover{background: #383838}
+.navigation ul a{color: #FFF}
+.navigation ul a:hover{text-decoration: none}
+/* Navigation */
+
 /* Slider */
+.special-header{padding-top: 140px;padding-left: 20px; color:#FFF;position: relative}
+.special-header:before
+{
+    content: '';
+    position: absolute;
+    top: 138px;
+    left: 0;
+    width: 7px;
+    height: 40px;
+    background: #FFF;
+}
 #sugSlider
 {
-    padding: 70px 0 0 0
+    padding: 30px 0 0 0
 }
-#sugSlider > i {color: #000}
+.product .image{position: relative}
+.product .image .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%; 
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.product .image:hover .overlay
+{
+    background: rgba(0, 0, 0, 0);
+}
+.product .image .icons p,
+.product .image .icons i
+{
+    opacity: 0;
+    transform:scale(1.5);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+/*.product .image:hover .icons
+{
+    opacity: 1;
+    transform: scale(1);
+}*/
+.product .image i
+{
+    color: #fbfbfb;
+    background: #151515;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 1.1rem;  
+    position: relative;
+    left: 43%;
+    margin-bottom: 15px;
+}
+.product .image:hover i
+{  
+    opacity: 1;
+    transform: scale(1);
+}
+.product .image p
+{
+    color: #555;
+    font-size: .9rem; 
+    text-align: center;
+    padding: 0 15px; 
+    font-weight: bold
+}
+.product .image:hover p
+{ 
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: .2s
+}
+#sugSlider > i 
+{
+    color: #000;
+    background: #FFF;
+    height: 30px;
+    width: 30px;
+    top: 50%
+}
+#sugSlider > i:first-of-type{left: 60px}
+#sugSlider > i:last-of-type{right: 60px}
 /* Slider */
 
 /* About */
-.about{padding: 70px 0}
+.about{padding: 90px 0}
+.about .abouthead{padding-top: 0; margin-bottom: 20px}
+.about .abouthead:before{top: 1px}
+.about p
+{
+    color: #d8d8d8;
+    font-size: 0.9rem;    
+}
 /* About */
 
 /* Footer */
@@ -55,28 +229,12 @@ footer
 /* =================================== CATEGORY PAGE =================================== */
 .categories
 {
-    padding: 100px 0
+    padding: 140px 0
 }
-.categories h2{text-align: center;position: relative;margin: 30px 0}
-.categories h2:after
-{
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    width: 40%;
-    height: 2px;
-    background: #000
-}
+.categories h2{position: relative;padding-top: 30px; padding-bottom: 30px}
 .categories h2:before
 {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    width: 40%;
-    height: 2px;
-    background: #000
+    top: 31px    
 }
 .categories .product{margin-bottom: 25px}
 /* =================================== CATEGORY PAGE =================================== */
@@ -96,12 +254,13 @@ footer
 
 
 /* =================================== DETAILS PAGE =================================== */
-.details{padding: 100px 0}
+.details{padding: 170px 0}
 .details ul
 {
-    background: #555;
+    background: #171717;
     color: #FFF;
-    padding: 20px;    
+    padding: 20px;   
+    border: 1px solid #555
 }
 .details ul li
 {
@@ -112,7 +271,7 @@ footer
 }
 .details ul li:nth-of-type(odd)
 {
-    background: #777
+    background: #383838
 }
 .details ul li span
 {
@@ -123,8 +282,47 @@ footer
 /* =================================== DETAILS PAGE =================================== */
 
 /* =================================== CONTACT PAGE =================================== */
-.contact-form
+/* Contact Form */
+.contact-form{max-width: 700px;margin:auto;padding: 80px 0}
+.contact-form h3{margin: 30px 0 50px 0;position: relative;color:#FFF;padding-top:40px}
+.contact-form h3:before{top: 36px}
+.contact-form .new-line{position: absolute;width: 200px;height: 2px;background: #bbbbbb;top: 40px}
+.contact-form .new-line span{position: absolute;height: 2px;background: #FFF}
+.contact-form input,
+.contact-form textarea
 {
-    padding: 100px 0
+    padding: 8px 8px 8px 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #F6F6F6;
+    outline: none
 }
+.contact-form input,
+.contact-form .form-group,
+.contact-form textarea{position: relative;}
+.contact-form input[type='submit']
+{
+    background: #0069d9;
+}
+.contact-form textarea{height: 200px}
+.contact-form i{position: absolute;top: 14px;left: 15px;font-size: .8rem;color: #c5c5c5}
+/* Contact Form */
 /* =================================== CONTACT PAGE =================================== */
+
+
+/* =================================== IMPRESSION PAGE =================================== */
+.impression
+{
+   padding: 60px 0
+}
+.impression > .type{margin-bottom: 20px}
+.impression marquee{margin-top: 20px}
+/* =================================== IMPRESSION PAGE =================================== */
+
+/* =================================== CATALOG PAGE =================================== */
+.catalog{padding: 100px 0}
+.catalog .row{margin-bottom: 25px}
+/* =================================== CATALOG PAGE =================================== */
