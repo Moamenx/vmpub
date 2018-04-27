@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(null=False, max_length=50)
-    photo = models.FileField(null=False)
+    photo = models.FileField(null=False, upload_to='main/static/main/images/categories')
 
     def __str__(self):
         return self.name

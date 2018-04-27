@@ -1,7 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %}
-{% endblock %}
+
 {% block content %}
 
 <!-- Suggest Product Slider -->
@@ -20,7 +19,7 @@
                         <a href='category.html'>
                             <div class='product'>
                                 <div class='image'>
-                                    <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                     <div class='overlay'>
                                         <div class='icons'>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -36,7 +35,7 @@
                         <a href='category.html'>
                             <div class='product'>
                                 <div class='image'>
-                                    <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                     <div class='overlay'>
                                         <div class='icons'>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -52,7 +51,7 @@
                         <a href='category.html'>
                             <div class='product'>
                                 <div class='image'>
-                                    <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                     <div class='overlay'>
                                         <div class='icons'>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
