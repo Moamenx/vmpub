@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% block content %}
-
+{% load static %}
     <!-- Impression -->
     <div class='impression'>
         <div class="container">
@@ -15,7 +15,7 @@
                         <h4>Title</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <div class='image'>
-                            <img src='images/1.jpg' alt='' class='img-fluid' />
+                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         <h4>Title</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <div class='image'>
-                            <img src='images/1.jpg' alt='' class='img-fluid' />
+                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <h4>Title</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <div class='image'>
-                            <img src='images/1.jpg' alt='' class='img-fluid' />
+                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <h4>Title</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <div class='image'>
-                            <img src='images/1.jpg' alt='' class='img-fluid' />
+                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>

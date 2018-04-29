@@ -5,8 +5,30 @@
         <div class="container">
             <div class='row'>
                 <div class='col-md-6'>
-                    <div id="map" style="width:100%;height:500px;background:yellow"></div>
+                    <div id="map" style="width:100%;height:500px;background:white"></div>
                 </div>
+     <script>
+
+      function initMap() {
+
+        var myLatLng = {lat: 46.171922, lng: 6.135269};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Reach Us'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt2i8qPwHwp87DMWUCzKl4njMN8GjcLfo&callback=initMap">
+    </script>
+
                 <div class='col-md-6'>
                     <ul class='list-unstyled info'>
                         <li><span>Email: </span>info@vmpub.ch</li>
@@ -23,4 +45,4 @@
     </div>
     <!-- Contact Details -->
 
-    {% endblock %}
+   {% endblock %}

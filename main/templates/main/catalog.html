@@ -1,4 +1,5 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block content %}
 
     <!-- Catalog -->
@@ -12,14 +13,14 @@
                 </div>
                 <div class="col-md-4">
                     <div class="image">
-                        <img src='images/1.jpg' alt='' class='img-fluid' />
+                        <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="image">
-                        <img src='images/1.jpg' alt='' class='img-fluid' />
+                        <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                     </div>
                 </div>
                 <div class="col-md-8">
