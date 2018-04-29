@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'catalog/', CatalogView.as_view(), name='catalog'),
     url(r'details/', DetailsView.as_view(), name='details'),
     url(r'contact-us/', ContactUsView.as_view(), name='contact'),
-    url(r'^categories/', CategoryView.as_view(), name='categories'),
+    url(r'^categories/(?P<cat_name>[\w|\W]+)/', CategoryView.as_view(), name='categories'),
     url(r'^products/', ProductView.as_view(), name='products'),
 
 ]

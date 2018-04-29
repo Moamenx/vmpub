@@ -15,6 +15,7 @@ def get_news():
             news.append(n.news)
     return news
 
+
 def get_categories():
     cat_names = []
     categories = Category.objects.all()
@@ -95,7 +96,7 @@ class ContactUsView(View):
 class CategoryView(View):
     template_name = 'main/category.html'
 
-    def get(self, request):
+    def get(self, request,cat_name):
 
         return render(request, 'main/category.html')
 
@@ -104,3 +105,4 @@ class ProductView(View):
 
     def get(self,request):
         return render(request, 'main/product.html')
+

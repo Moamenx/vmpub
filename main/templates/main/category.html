@@ -1,4 +1,5 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block content %}
  <!-- Categories -->
     <div class='categpry-page'>
@@ -8,10 +9,25 @@
                 <div class='category'>
                     <div class='row'>
                         <div class="col-md-4">
-                            <a href='product.html'>
+                            <a href='{% url 'main:products' %}'>
                                 <div class='product'>
                                     <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                         <div class='overlay'>
                                             <div class='icons'>
                                                 <i class='fa fa-search-plus see'></i>
@@ -26,7 +42,82 @@
                             <a href='product.html'>
                                 <div class='product'>
                                     <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                        <div class='overlay'>
+                                            <div class='icons'>
+                                                <i class='fa fa-search-plus see'></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href='{% url 'main:products' %}'>
+                                <div class='product'>
+                                    <div class='image'>
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                         <div class='overlay'>
                                             <div class='icons'>
                                                 <i class='fa fa-search-plus see'></i>
@@ -41,97 +132,7 @@
                             <a href='product.html'>
                                 <div class='product'>
                                     <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
-                                        <div class='overlay'>
-                                            <div class='icons'>
-                                                <i class='fa fa-search-plus see'></i>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href='product.html'>
-                                <div class='product'>
-                                    <div class='image'>
-                                        <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                        <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                         <div class='overlay'>
                                             <div class='icons'>
                                                 <i class='fa fa-search-plus see'></i>

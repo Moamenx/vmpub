@@ -1,4 +1,5 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block content %}
 
     <!-- Product -->
@@ -9,7 +10,7 @@
                     <div class="col-md-8">
                         <div class='product'>
                             <div class='image' id='holder'>
-                                <img src='images/1.jpg' alt='product1' class='img-fluid' />
+                                <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                             </div>
                             <div class='desc'>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, inventore consectetur saepe ipsa doloribus in earum laudantium harum explicabo debitis quam, quos necessitatibus.</p>
@@ -19,11 +20,11 @@
                     <div class="col-md-4">
                         <div class='shuffle'>
                             <ul class='list-unstyled'>
-                                <li><img src='images/1.jpg' alt='' class='img-fluid' /></li>
-                                <li><img src='images/2.jpg' alt='' class='img-fluid' /></li>
-                                <li><img src='images/3.jpg' alt='' class='img-fluid' /></li>
-                                <li><img src='images/4.jpg' alt='' class='img-fluid' /></li>
-                                <li><img src='images/5.jpg' alt='' class='img-fluid' /></li>
+                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
                             </ul>
                         </div>
                     </div>

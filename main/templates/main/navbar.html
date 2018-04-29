@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load menu  %}
 {% block navbar %}
         <!-- Navigation -->
     <nav>
@@ -22,19 +22,23 @@
     <div class="navigation">
         <div class="container">
             <ul class='list-unstyled main'>
-                <li><a href='{% url 'main:home' %}'>Home</a></li>
-                <li><a href='{% url 'main:impression' %}'>Impression</a></li>
-                <li><a href='{% url 'main:catalog' %}'>Catalog</a></li>
+                <li><a href='{% url 'main:home' %}'>Accueil</a></li>
                 <li class='cat-link'>
-                    <a href=''>Categories</a>
+                    <a href=''>Produits</a>
                     <ul class='list-unstyled sup-menu'>
-                        <li><a href='category.html'>Category1</a></li>
-                        <li><a href='category.html'>Category2</a></li>
-                        <li><a href='category.html'>Category3</a></li>
+
+                     {% for cat in categories %}
+                      <li><a href='{% url 'main:categories' cat_name=cat %}'> {{ cat }}</a></li>
+                     {% endfor %}
+
+
                     </ul>
                 </li>
+                <li><a href='{% url 'main:impression' %}'>Impression</a></li>
+                <li><a href='{% url 'main:catalog' %}'>Catalogues</a></li>
+
                 <li><a href='{% url 'main:contact' %}'>Contact us</a></li>
-                <li><a href='{% url 'main:details' %}'>About us</a></li>
+                <li><a href='{% url 'main:details' %}'>Contacts</a></li>
             </ul>
         </div>
     </div>
