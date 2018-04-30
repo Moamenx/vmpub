@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block content %}
-
-<!-- Suggest Product Slider -->
+    <!-- Suggest Product Slider -->
     <!-- Special Header For Slider -->
     <div class='container'>
         <h3 class='special-header'>All Categories</h3>
@@ -66,9 +65,64 @@
                 <!-- End Of SugSlider Row -->
             </div>
             <!-- End of Carousel Item -->
+            <div class="carousel-item">
+                <!-- Start Of SugSlider Row -->
+                <div class='row'>
+                    <div class='col'>
+                        <!-- ********** Start Product ********** -->
+                        <a href='{% url 'main:categories' cat_name='Stylos' %}'>
+                            <div class='product'>
+                                <div class='image'>
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                    <div class='overlay'>
+                                        <div class='icons'>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- ********** End Product ********** -->
+                    </div>
+                    <div class='col'>
+                        <!-- ********** Start Product ********** -->
+                        <a href='{% url 'main:categories' cat_name='Stylos' %}'>
+                            <div class='product'>
+                                <div class='image'>
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                    <div class='overlay'>
+                                        <div class='icons'>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- ********** End Product ********** -->
+                    </div>
+                    <div class='col'>
+                        <!-- ********** Start Product ********** -->
+                        <a href='{% url 'main:categories' cat_name='Stylos' %}'>
+                            <div class='product'>
+                                <div class='image'>
+                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                    <div class='overlay'>
+                                        <div class='icons'>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- ********** End Product ********** -->
+                    </div>
+                </div>
+                <!-- End Of SugSlider Row -->
+            </div>
+            <!-- End of Carousel Item -->
         </div>
         <i class="carousel-control-prev fa fa-angle-left" href="#sugSlider" role="button" data-slide="prev">
-            <span class="sr-only">السابق</span>
+            <span class="sr-only">ÇáÓÇÈÞ</span>
         </i>
         <i class="carousel-control-next fa fa-angle-right" href="#sugSlider" role="button" data-slide="next">
             <span class="sr-only">Next</span>
@@ -81,7 +135,10 @@
     <div class="about">
         <div class='container'>
             <h2 class='special-header abouthead'>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sequi, beatae voluptatem suscipit tempore velit assumenda sed deserunt aspernatur iure repellat fugit repudiandae sapiente quas minima praesentium quae tempora. Esse.</p>
+            <p>VM PUB est une entreprise régionale spécialisée dans la publicité par l'objet, vente d'articles cadeaux publicitaires, cadeaux d'affaire, objets publicitaires et promotionnels en Suisse romande.</p>
+            <p>Nous vous proposons une vaste gamme d'objets publicitaires, cadeaux d'entreprise, articles, textiles promotionnels et cadeaux publicitaires avec l'impression de votre raison sociale, logo ou tout autre message. </p>
+
+            <p>Parmi les objets publicitaires les plus sollicités, voici quelques exemples: cadres de plaques pour vehicules et motos, stylos publicitaires personnalisés, notes adhésives (sticky notes / post-it), crayons à papier, briquets publicitaires. Nous vous proposons également des articles  textiles tels que des t-shirts publicitaires, polo-shirts, sweat-shirts, casquettes, mais également d'autres articles publicitaires comme des calendriers, agendas, règles, autocollants, calculatrices, lampes de poche, porte-clés, boîtes et  pochettes d'allumettes, disques de stationnement, cadres de plaques numéralogiques pour véhicules (autos, motos), etc. Vous trouverez de plus amples informations sur notre gamme d'articles cadeaux publicitaires et objets publicitaires en consultant  les diverses pages de notre site.</p>
         </div>
     </div>
     <!-- About us -->

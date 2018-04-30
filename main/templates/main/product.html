@@ -10,10 +10,10 @@
                     <div class="col-md-8">
                         <div class='product'>
                             <div class='image' id='holder'>
-                                <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                <img src='{{ product.photo.url }}' alt='product1' class='img-fluid' />
                             </div>
                             <div class='desc'>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, inventore consectetur saepe ipsa doloribus in earum laudantium harum explicabo debitis quam, quos necessitatibus.</p>
+                                <p>{{ product.description }}</p>
                             </div>
                         </div>
                     </div>

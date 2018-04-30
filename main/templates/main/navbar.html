@@ -1,22 +1,22 @@
 {% load static %}
 {% load menu  %}
 {% block navbar %}
-        <!-- Navigation -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">
             <img src='{% static 'main/images/logo.png' %}' alt='logo' class='img-fluid' />
         </div>
         <div class="search">
             <form action="" method="">
-                <input type="search" name='filter' class='' />
+                <input type="search" name='filter' class='' placeholder='Search'/>
+                <input type='submit' name='submit' value='&#xf002;' class='btn btn-success' />
             </form>
         </div>
-        <div class="lhs">
+        <!--<div class="lhs">
             <i class='fa fa-heart'></i>
-        </div>
+        </div>-->
     </nav>
     <!-- Navigation -->
-
 
     <!-- Nav -->
     <div class="navigation">
