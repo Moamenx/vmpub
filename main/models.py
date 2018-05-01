@@ -1,10 +1,11 @@
 from django.db import models
+from django.conf import settings
 
 
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(null=False, max_length=50)
-    photo = models.FileField(null=False, upload_to='categories/')
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT+'/categories/')
 
     def __str__(self):
         return self.name
@@ -15,7 +16,7 @@ class Product(models.Model):
     description = models.CharField(null=False, max_length=2000)
     short_description = models.CharField(null=False, max_length=70)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=False)
-    photo = models.FileField(null=False, upload_to='products/')
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT+'/products/')
 
     def __str__(self):
         return self.name

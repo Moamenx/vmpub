@@ -101,6 +101,7 @@ class CategoryView(View):
     template_name = 'main/category.html'
 
     def get(self, request, cat_name):
+        product_photos = None
         products = Product.objects.all()
         try:
             category = Category.objects.all().filter(name=cat_name)
@@ -108,27 +109,29 @@ class CategoryView(View):
             category = None
         try:
             products = Product.objects.all().filter(category=category)
-            product_photos = ProductPhoto.objects.all()
+          # product_photos = ProductPhoto.objects.all()
         except Product.DoesNotExist:
             products = None
             product_photos = None
 
-        context = {'category_name': cat_name, 'product_photos': product_photos, 'products': products, 'cats': Category.objects.all()}
+        context = {'category_name': cat_name, 'product_photos': product_photos, 'products': products,
+                   'cats': Category.objects.all()}
         return render(request, 'main/category.html', context)
 
 
 class ProductView(View):
     template_name = 'main/product.html'
+
     def get(self, request, cat_name, product_name):
-        context ={}
+        context = {}
+        product_photos = None
         if Product.objects.all().filter(name=product_name).exists():
             try:
                 product = Product.objects.get(name=product_name)
-                product_photos = ProductPhoto.objects.all().filter(product=product)
+                #product_photos = ProductPhoto.objects.all().filter(product=product)
             except (Product.DoesNotExist, ProductPhoto.DoesNotExist):
                 product_photos = None
                 product = None
-            context = {'product': product,'category': cat_name,  'product_photos': product_photos}
-
+            context = {'product': product, 'category': cat_name, 'product_photos': product_photos}
 
         return render(request, 'main/product.html', context)
