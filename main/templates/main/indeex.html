@@ -128,9 +128,59 @@
             <span class="sr-only">Next</span>
         </i>
     </div>
+
     <!-- Suggest Product Slider -->
 {% endblock %}
 {% block aboutus %}
+        <!-- Special Header For Slider -->
+    <div id="sugSlider" class="carousel slide category" data-ride="carousel">
+        <div class="carousel-inner container">
+            {% for cat in cats %}
+
+             {% if forloop.first %}
+        <div class="carousel-item active">
+            <div class="row">
+                {% elif forloop.counter0|divisibleby:"3" %}
+                <div class="carousel-item">
+                    <div class="row">
+                        {% endif %}
+                        <!-- Start Of SugSlider Row -->
+                    <div class='col'>
+                        <!-- ********** Start Product ********** -->
+                        <a href='{% url 'main:categories' cat_name='Stylos' %}'>
+                            <div class='product'>
+                                <div class='image'>
+                                    <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
+                                    <div class='overlay'>
+                                        <div class='icons'>
+                                            <p>{{ cat.name }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- ********** End Product ********** -->
+                    </div>
+                      {% if forloop.counter|divisibleby:"3" %}
+              </div>
+                </div>
+          {% endif %}
+
+        {% endfor %}
+        </div>
+
+        </div>
+        </div>
+        <i class="carousel-control-prev fa fa-angle-left" href="#sugSlider" role="button" data-slide="prev">
+            <span class="sr-only">ÇáÓÇÈÞ</span>
+        </i>
+        <i class="carousel-control-next fa fa-angle-right" href="#sugSlider" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+        </i>
+    </div>
+{% endblock %}
+
+{% comment %}{% block aboutus %}
      <!-- About us -->
     <div class="about">
         <div class='container'>
@@ -142,4 +192,4 @@
         </div>
     </div>
     <!-- About us -->
-{% endblock %}
+{% endblock %}{% endcomment %}

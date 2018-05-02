@@ -36,7 +36,7 @@ class HomeView(View):
     template_name = 'main/indeex.html'
 
     def get(self, request):
-        context = {'news': get_news(), 'cats': get_categories()}
+        context = {'news': get_news(), 'cats': Category.objects.all()}
         return render(request, 'main/indeex.html', context)
 
     def post(self, request):
@@ -86,12 +86,12 @@ class ContactUsView(View):
         if not re.match("[^@]+@[^@]+\.[^@]+", email):
             context = {'categories': get_categories(), 'msg': 'Invalid email address'}
             return render(request, 'main/contact.html', context)
-        phone = self.request.POST.get('phone')
         message = self.request.POST.get('message')
         name = self.request.POST.get('name')
+        print(message)
         # if name and message and phone!= "":
-        send_mail("Business User",
-                  "Name: " + name + "\n" + "User Email: " + email + "\n" + "User Phone: " + phone + "\n" + "Message: " + message,
+        send_mail("Business Request",
+                  "Name: " + name + "\n" + "Contact Email: " + email + "\n" + "\n" + "Message: " + message,
                   settings.EMAIL_HOST_USER, ['20140165@fa-hists.edu.eg'], fail_silently=False)
         messages.success(request, 'Thank you for sending us an email!')
         return render(request, 'main/contact.html')
