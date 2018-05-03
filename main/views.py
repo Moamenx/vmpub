@@ -104,7 +104,7 @@ class CategoryView(View):
         product_photos = None
         products = Product.objects.all()
         try:
-            category = Category.objects.all().filter(name=cat_name)
+            category = Category.objects.get(name=cat_name)
         except Category.DoesNotExist:
             category = None
         try:
