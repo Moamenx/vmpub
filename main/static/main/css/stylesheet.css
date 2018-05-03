@@ -6,11 +6,37 @@
     -o-box-sizing: border-box;
     box-sizing: border-box;
 }
+html
+{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url(../images/bg.jpg);
+    background-position: left top;
+    background-repeat: repeat;
+    background-attachment: scroll;    
+}
 body
 {
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #272727, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #272727, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.main-image-back img
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;   
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Do Hyeon', sans-serif;    
+}
+p,li,a
+{
+    font-family: 'Raleway', sans-serif;    
 }
 /* Global */
 
@@ -69,7 +95,17 @@ nav .search form input[type='submit']
 {
     padding: 5px;
     font-size: 0.85rem;
-    margin-bottom: 3px;   
+    margin-bottom: 3px;  
+    background:#FFF;
+    padding: 5px 10px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.navigation ul li:hover 
+{
+    background: #131313;
 }
 .navigation ul .cat-link
 {
@@ -83,18 +119,27 @@ nav .search form input[type='submit']
     top: 30px;
     padding: 8px 0;
     display: none;
+    border-top: 5px solid #FFF;    
+    /*-webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;*/
+}
+/*.navigation ul .cat-link:hover .sup-menu
+{
+    display: block;
+}*/
+.navigation ul.sup-menu li{padding: 5px 0 8px 10px}
+.navigation ul.sup-menu li:hover{background: #383838}
+.navigation ul a
+{
+    color: #131313;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out
+    transition: all .4s ease-in-out;
 }
-.navigation ul .cat-link:hover .sup-menu
-{
-    display: block
-}
-.navigation ul.sup-menu li{padding: 5px 0 8px 10px}
-.navigation ul.sup-menu li:hover{background: #383838}
-.navigation ul a{color: #FFF}
+.navigation ul li:hover a{color: #FFF}
 .navigation ul a:hover{text-decoration: none}
 /* Navigation */
 
@@ -114,7 +159,7 @@ nav .search form input[type='submit']
 {
     padding: 30px 0 0 0
 }
-.product .image{position: relative}
+.product .image{position: relative; width: 350px; height: 204px}
 .product .image .overlay
 {
     position: absolute;
@@ -137,6 +182,23 @@ nav .search form input[type='submit']
 {
     background: rgba(0, 0, 0, 0);
 }
+.product .image .overlay h4
+{
+    position: absolute;
+    top: 40%;
+    text-align: center;   
+    color: #121212;    
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.product .image:hover .overlay h4
+{
+    top: 15px
+}
+.product .image .icons p{color: #444;}
+.product .image .icons i{color: #F5F5F5}
 .product .image .icons p,
 .product .image .icons i
 {
@@ -289,6 +351,15 @@ footer
 .contact-form h3:before{top: 36px}
 .contact-form .new-line{position: absolute;width: 200px;height: 2px;background: #bbbbbb;top: 40px}
 .contact-form .new-line span{position: absolute;height: 2px;background: #FFF}
+.contact-form .form-group
+{
+    transform: translateX(-40px);
+    opacity: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;    
+}
 .contact-form input,
 .contact-form textarea
 {
@@ -300,7 +371,7 @@ footer
     margin-bottom: 15px;
     color: #F6F6F6;
     outline: none;
-    resize: none
+    resize: none;
 }
 .contact-form input,
 .contact-form .form-group,
@@ -336,7 +407,7 @@ footer
 /* =================================== IMPRESSION PAGE =================================== */
 
 /* =================================== CATALOG PAGE =================================== */
-.catalog{padding: 160px 0}
-.catalog .row{margin-bottom: 25px}
+.catalog{padding: 40px 0}
+.catalog .row{margin-bottom: 75px}
 .catalog .row .text{color: #FFF}
 /* =================================== CATALOG PAGE =================================== */

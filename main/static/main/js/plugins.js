@@ -7,7 +7,9 @@ $(function () {
     var subnav = $(".subnav"),
         nav = $("nav"),
         navigation = $(".navigation"),
-        catSection = $(".categories-links");
+        catSection = $(".categories-links"),
+        mainMenu    = $(".navigation ul .cat-link"),
+        subMenu     = $(".sup-menu");
 
     $(window).on("scroll", function () {
         var sc = $(this).scrollTop();
@@ -27,6 +29,21 @@ $(function () {
     });
     
     navigation.css("top", nav.innerHeight());
+    
+    mainMenu.hover(function () {
+        subMenu.fadeIn(300);
+    }, function () {
+        subMenu.fadeOut(300);
+    });
+    
+    $(".contact-form form .form-group").each(function (i) {
+        setTimeout(function () {
+            $(".contact-form form .form-group").eq(i).css({
+                opacity: 1,
+                transform: "translateX(0)"
+            });
+        }, 150 * (i + 1));
+    });
     
     /*$(".product-page .window .product .image img").resizable({
         containment: "#holder",
