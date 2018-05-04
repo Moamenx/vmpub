@@ -43,13 +43,6 @@ class HomeView(View):
         pass
 
 
-class AboutView(View):
-    template_name = 'main/about.html'
-
-    def get(self, request):
-        return render(request, 'main/about.html')
-
-
 class DetailsView(View):
     template_name = 'main/details.html'
 
@@ -87,10 +80,11 @@ class ContactUsView(View):
             context = {'categories': get_categories(), 'msg': 'Invalid email address'}
             return render(request, 'main/contact.html', context)
         message = self.request.POST.get('message')
+        subject = self.request.POST.get('subject')
         name = self.request.POST.get('name')
         print(message)
         # if name and message and phone!= "":
-        send_mail("Business Request",
+        send_mail("VMPUB - "+ subject,
                   "Name: " + name + "\n" + "Contact Email: " + email + "\n" + "\n" + "Message: " + message,
                   settings.EMAIL_HOST_USER, ['20140165@fa-hists.edu.eg'], fail_silently=False)
         messages.success(request, 'Thank you for sending us an email!')
@@ -109,7 +103,7 @@ class CategoryView(View):
             category = None
         try:
             products = Product.objects.all().filter(category=category)
-          # product_photos = ProductPhoto.objects.all()
+           #product_photos = ProductPhoto.objects.all()
         except Product.DoesNotExist:
             products = None
             product_photos = None
