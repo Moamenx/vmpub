@@ -10,7 +10,11 @@
                     <div class="col-md-8">
                         <div class='product'>
                             <div class='image' id='holder'>
-                                <img src='{{ product.photo.url }}' alt='product1' class='img-fluid' />
+                                <div class='img1 active'><img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' /></div>
+                                <div class='img2 hidden'><img src='{% static 'main/images/2.jpg' %}' alt='product1' class='img-fluid' /></div>
+                                <div class='img3 hidden'><img src='{% static 'main/images/3.jpg' %}' alt='product1' class='img-fluid' /></div>
+                                <div class='img4 hidden'><img src='{% static 'main/images/4.jpg' %}' alt='product1' class='img-fluid' /></div>
+                                <div class='img5 hidden'><img src='{% static 'main/images/5.jpg' %}' alt='product1' class='img-fluid' /></div>
                             </div>
                             <div class='desc'>
                                 <p>{{ product.description }}</p>
@@ -19,12 +23,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class='shuffle'>
+                            <h4 class='text-center'>See More</h4>
                             <ul class='list-unstyled'>
-                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
-                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
-                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
-                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
-                                <li><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li data-class='.img1'><img src='{% static 'main/images/1.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li data-class='.img2'><img src='{% static 'main/images/2.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li data-class='.img3'><img src='{% static 'main/images/3.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li data-class='.img4'><img src='{% static 'main/images/4.jpg' %}' alt='' class='img-fluid' /></li>
+                                <li data-class='.img5'><img src='{% static 'main/images/5.jpg' %}' alt='' class='img-fluid' /></li>
                             </ul>
                         </div>
                     </div>
