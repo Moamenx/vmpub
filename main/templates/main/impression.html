@@ -8,64 +8,22 @@
     <div class='impression'>
         <div class="container">
             <div class="start">
-                <h4>Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h4 style="color: #491217">Méthodes de marquage</h4>
+                <p>Différentes méthodes de marquage sont utilisées pour une qualité durable. La méthode employée dépend de l'objet.</p>
             </div>
             <div class="row">
+                {% for imp in impressions %}
                 <div class="col-md-6">
                     <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h4 style="color: #491217">{{ imp.title }}</h4>
+                        <p>{{ imp.description }}</p>
                         <div class='image'>
                             <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="type">
-                        <h4>Title</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+
             </div>
             <marquee>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo est, porro autem consequatur excepturi</marquee>
         </div>

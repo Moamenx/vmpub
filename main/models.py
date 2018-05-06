@@ -22,6 +22,24 @@ class Product(models.Model):
         return self.name
 
 
+class Impression(models.Model):
+    title = models.CharField(null=False, max_length=100)
+    description = models.CharField(null=False, max_length=2000)
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/impression/')
+
+    def __str__(self):
+        return self.title
+
+
+class Catalog(models.Model):
+    description = models.CharField(null=False, max_length=2000)
+    link = models.CharField(null=False, max_length=200)
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/impression/')
+
+    def __str__(self):
+        return self.description[:30]
+
+
 class ProductPhoto(models.Model):
     product = models.ForeignKey('Product', on_delete=models.CASCADE, null=False, related_name='images')
     photo = models.FileField(null=False)

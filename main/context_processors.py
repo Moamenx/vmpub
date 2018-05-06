@@ -1,4 +1,4 @@
-from main.models import Category
+from main.models import Category,Impression,Catalog
 
 
 def get_category_menu(request):
@@ -6,6 +6,9 @@ def get_category_menu(request):
     categories = Category.objects.all()
     for category in categories:
         cat_names.append(category.name)
+
     return {
         'categories': cat_names,
+        'impressions': Impression.objects.all(),
+        'catalogs': Catalog.objects.all(),
     }

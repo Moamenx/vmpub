@@ -15,24 +15,26 @@
                                 <a href="#">Sitemap</a>
                             </li>
                             <li class="active">
-                                <a href="#">Accueil <span class="sr-only">(current)</span></a>
+                                <a href="{% url 'main:home' %}">Accueil <span class="sr-only">(current)</span></a>
                             </li>
+                            {% for cat in categories %}
                             <li>
-                                <a href="#">Produits</a>
+                                <a href="{% url 'main:categories' cat_name=cat %}">{{ cat }}</a>
                             </li>
+                            {% endfor %}
                             <li>
-                                <a href="#">Impression</a>
+                                <a href="{% url 'main:impression' %}">Impression</a>
                             </li>
                         </div>
                         <div class='col-6'>
                             <li>
-                                <a href="#">Catalogues</a>
+                                <a href="{% url 'main:catalog' %}">Catalogues</a>
                             </li>
                             <li>
-                                <a href="#">Contact us</a>
+                                <a href="{% url 'main:contact' %}">Contact us</a>
                             </li>
                             <li>
-                                <a href="#">Contacts</a>
+                                <a href="{% url 'main:details' %}">Contacts</a>
                             </li>
                         </div>
                     </ul>
