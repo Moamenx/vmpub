@@ -25,7 +25,7 @@
                         <a href='{% url 'main:categories' cat_name=cat %}'>
                             <div class='product'>
                                 <div class='image'>
-                                    <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
+                                    <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
                                     <div class='overlay'>
                                         <h4>{{ cat.name|title }}</h4>
                                         <div class='icons'>
