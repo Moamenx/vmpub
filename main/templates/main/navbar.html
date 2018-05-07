@@ -28,7 +28,7 @@
                     <ul class='list-unstyled sup-menu'>
 
                      {% for cat in categories %}
-                      <li><a href='{% url 'main:categories' cat_name=cat %}'> {{ cat }}</a></li>
+                      <li><a href='{% url 'main:categories' cat_name=cat %}'> {{ cat|title }}</a></li>
                      {% endfor %}
 
 

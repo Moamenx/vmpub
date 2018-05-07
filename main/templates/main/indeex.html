@@ -27,9 +27,9 @@
                                 <div class='image'>
                                     <img src='{% static 'main/images/1.jpg' %}' alt='product1' class='img-fluid' />
                                     <div class='overlay'>
-                                        <h4>Category 1</h4>
+                                        <h4>{{ cat.name|title }}</h4>
                                         <div class='icons'>
-                                            <p>{{ cat.name }}</p>
+                                            <p>{{ cat.name|title }}</p>
                                         </div>
                                     </div>
                                 </div>

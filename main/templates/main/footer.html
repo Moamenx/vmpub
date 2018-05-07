@@ -19,16 +19,17 @@
                             </li>
                             {% for cat in categories %}
                             <li>
-                                <a href="{% url 'main:categories' cat_name=cat %}">{{ cat }}</a>
+                                <a href="{% url 'main:categories' cat_name=cat %}">{{ cat|title }}</a>
                             </li>
                             {% endfor %}
-                            <li>
-                                <a href="{% url 'main:impression' %}">Impression</a>
-                            </li>
+                           
                         </div>
                         <div class='col-6'>
                             <li>
                                 <a href="{% url 'main:catalog' %}">Catalogues</a>
+                            </li>
+							 <li>
+                                <a href="{% url 'main:impression' %}">Impression</a>
                             </li>
                             <li>
                                 <a href="{% url 'main:contact' %}">Contact us</a>
