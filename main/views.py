@@ -118,11 +118,10 @@ class ProductView(View):
 
     def get(self, request, cat_name, product_name):
         context = {}
-        product_photos = None
         if Product.objects.all().filter(name=product_name).exists():
             try:
                 product = Product.objects.get(name=product_name)
-                #product_photos = ProductPhoto.objects.all().filter(product=product)
+                product_photos = ProductPhoto.objects.all().filter(product=product)
             except (Product.DoesNotExist, ProductPhoto.DoesNotExist):
                 product_photos = None
                 product = None

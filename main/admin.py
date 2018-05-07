@@ -1,13 +1,11 @@
 from django.contrib import admin
-from django.contrib.admin import AdminSite
-
 
 from main.models import Product, Category, HotNew, ProductPhoto, Impression, Catalog
 
 
-
 class InlineProductPhotos(admin.TabularInline):
     model = ProductPhoto
+
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [InlineProductPhotos]
@@ -22,5 +20,3 @@ admin.site.register(Product, ProductAdmin)
 admin.site.register(HotNew)
 admin.site.register(Impression)
 admin.site.register(Catalog)
-
-
