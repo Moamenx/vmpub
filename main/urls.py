@@ -12,3 +12,28 @@ urlpatterns = [
     url(r'^products/(?P<cat_name>[\w|\W]+)/(?P<product_name>[\w|\W]+)/', ProductView.as_view(), name='products'),
 
 ]
+
+import os
+import main.models
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def update_database():
+    for photo in Category.objects.all():
+        name = photo.photo.name.split("/categories/")[1]
+        final = BASE_DIR + '/media/categories/' + name
+        photo.photo = final
+        photo.save()
+    for photo in Product.objects.all():
+        name = photo.photo.name.split("/products/")[1]
+        final = BASE_DIR + '/media/products/' + name
+        photo.photo = final
+        photo.save()
+    for photo in ProductPhoto.objects.all():
+        name = photo.photo.name.split("/product-photos/")[1]
+        final = BASE_DIR + '/media/product-photos/' + name
+        photo.photo = final
+        photo.save()
+
+update_database()

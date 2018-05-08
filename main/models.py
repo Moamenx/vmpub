@@ -34,7 +34,7 @@ class Impression(models.Model):
 class Catalog(models.Model):
     description = models.CharField(null=False, max_length=2000)
     link = models.CharField(null=False, max_length=200)
-    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/impression/')
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/catalog/')
 
     def __str__(self):
         return self.description[:30]
@@ -42,7 +42,7 @@ class Catalog(models.Model):
 
 class ProductPhoto(models.Model):
     product = models.ForeignKey('Product', on_delete=models.CASCADE, null=False, related_name='images')
-    photo = models.FileField(null=False)
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/product-photos/')
 
     def __str__(self):
         return self.product.name
