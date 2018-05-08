@@ -53,6 +53,18 @@ $(function () {
         console.log($(this).data('class'));
     });
     
+    
+    /* Hamburger Active */
+    $(".icon").click(function () {
+        $(this).toggleClass('active');
+        $(".nav-content .mlinks").slideToggle(300);
+    });
+    $(".cat-link").click(function () {
+        $(".cat-link .sup-menu").slideToggle(300);
+        console.log("YES");
+    });
+    $(".mobnav").css('top', nav.innerHeight());
+    /* Hamburger Active */
     /*$(".product-page .window .product .image img").resizable({
         containment: "#holder",
         aspectRatio: true

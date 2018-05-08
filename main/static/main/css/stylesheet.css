@@ -94,6 +94,7 @@ nav .search form input[type='submit']
     background: #131313;
     z-index: 12;    
 }
+@media (min-width: 0) and (max-width: 767px) {.navigation{display: none}}
 .navigation .main{display: flex;justify-content: space-around;margin: 0;text-align: center;}
 .navigation .main > li
 {   
@@ -124,7 +125,7 @@ nav .search form input[type='submit']
     top: 30px;
     padding: 8px 0;
     display: none;
-    border-top: 5px solid #FFF;    
+    border-top: 5px solid #FFF;  
     /*-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -147,6 +148,103 @@ nav .search form input[type='submit']
 .navigation .main li:hover a{color: #FFF}
 .navigation ul a:hover{text-decoration: none}
 /* Navigation */
+
+/* Start Mobile Nav */
+.mobnav
+{
+    background: #222;
+    overflow: hidden;
+    position: fixed;
+    top: 88px;
+    width: 100%;
+    z-index: 9;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+.mobnav.active {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 2px;
+    z-index: 3;
+    background: #222
+}
+@media (min-width: 768px) {.mobnav,.sub-menu{display: none}}
+.mobnav .nav-content{overflow: hidden}
+.mobnav .nav-content .mlinks
+{
+    position: relative;
+    height: 100vh;
+    z-index: 9;
+    display: none;   
+    padding: 10px
+}
+.hamburger
+{
+    position: fixed;
+    top: 105px;
+    left: 20px;
+    width: 20px;
+    height: 3px;
+    background: #b34345;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    z-index: 999;
+    cursor: pointer
+}
+.hamburger:before,
+.hamburger:after
+{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: #FFF;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.hamburger:after{background:#5f1711}
+.hamburger:before{top: -6px}
+.hamburger:after{top: 6px}
+.icon.active .hamburger{background: rgba(255, 255, 255, 0);}
+.icon.active .hamburger:before{top: 0;transform: rotate(45deg);}
+.icon.active .hamburger:after{top: 0;transform: rotate(135deg);}
+.mobnav .mlinks li
+{
+    color: #FFF;
+    padding-bottom: 13px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer
+}
+.mobnav .mlinks li:hover{padding-left: 2px}
+.mobnav .mlinks li a{color: #FFF;text-decoration: none}
+.mobnav .mlinks .sup-menu
+{
+    display: none;
+    margin-top: 7px
+}
+
+.mobnav ul.sup-menu
+{
+    padding-left: 20px;
+    background: #1f1f1f;
+    padding: 10px 10px 10px 20px;
+}
+.mobnav ul.sup-menu li a{color: #DDD;text-decoration: none}
+
+
+
+/* End Mobile Nav */
 
 /* Slider */
 .special-header{padding-top: 140px;padding-left: 20px; color:#FFF;position: relative}
@@ -357,6 +455,7 @@ nav .search form input[type='submit']
     top: 31px    
 }
 .categories .product{margin-bottom: 25px}
+.category-page .product .image{margin: auto}
 /* =================================== CATEGORY PAGE =================================== */
 
 /* =================================== PRODUCT PAGE =================================== */
@@ -395,6 +494,13 @@ nav .search form input[type='submit']
 
 /* =================================== DETAILS PAGE =================================== */
 .details{padding: 170px 0}
+@media (min-width: 0) and (max-width: 767px)
+{    
+    .details .informations
+    {
+        margin-top: 25px
+    }
+}
 .details ul
 {
     background: #171717;
@@ -470,6 +576,10 @@ nav .search form input[type='submit']
 }
 .impression .start{margin: 30px 0 70px 0; color: #FFF}
 .impression .type {color: #FFF;margin-bottom: 15px}
+@media (min-width: 0) and (max-width: 767px)
+{
+    .impression .type{margin-bottom: 25px}
+}
 .impression .type h4{font-size: 1.3rem}
 .impression .type p
 {
