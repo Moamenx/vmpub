@@ -4,12 +4,13 @@ $(function () {
 
     'use strict';
 
-    var subnav = $(".subnav"),
-        nav = $("nav"),
-        navigation = $(".navigation"),
-        catSection = $(".categories-links"),
+    var subnav      = $(".subnav"),
+        nav         = $("nav"),
+        navigation  = $(".navigation"),
+        catSection  = $(".categories-links"),
         mainMenu    = $(".navigation ul .cat-link"),
-        subMenu     = $(".sup-menu");
+        subMenu     = $(".sup-menu"),
+        mobSearch   = $("nav i");
 
     $(window).on("scroll", function () {
         var sc = $(this).scrollTop();
@@ -64,6 +65,11 @@ $(function () {
         console.log("YES");
     });
     $(".mobnav").css('top', nav.innerHeight());
+    
+    // Mob Search
+    mobSearch.click(function () {
+        $("nav .mob-search").fadeToggle(200);
+    });
     /* Hamburger Active */
     /*$(".product-page .window .product .image img").resizable({
         containment: "#holder",
