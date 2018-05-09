@@ -79,7 +79,7 @@ nav .mob-search form input[type='search']
 }
 nav .mob-search form input[type='submit']
 {
-   background: #000;
+   background: #000 !important;
 
 }
 ::placeholder{color: #d4d4d4;font-size: 1rem}
