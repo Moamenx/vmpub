@@ -22,23 +22,27 @@
     <div class="navigation">
         <div class="container">
             <ul class='list-unstyled main'>
-                <li><a href='{% url 'main:home' %}'>Accueil</a></li>
-                <li class='cat-link'>
-                    <a href=''>Produits</a>
+               <a href='{% url 'main:home' %}'><li class='active'>Accueil</li></a>
+                <li class='cat-link'><i class='fa fa-angle-down'></i>
+                    Produits
                     <ul class='list-unstyled sup-menu'>
 
                      {% for cat in categories %}
-                      <li><a href='{% url 'main:categories' cat_name=cat %}'> {{ cat|title }}</a></li>
+                         <a href='{% url 'main:categories' cat_name=cat %}'><li>{{ cat|title }}</li></a>
+
                      {% endfor %}
 
 
                     </ul>
                 </li>
-                <li><a href='{% url 'main:impression' %}'>Impression</a></li>
-                <li><a href='{% url 'main:catalog' %}'>Catalogues</a></li>
 
-                <li><a href='{% url 'main:contact' %}'>Contact us</a></li>
-                <li><a href='{% url 'main:details' %}'>Contacts</a></li>
+                <a href='{% url 'main:impression' %}'><li>Impression</li></a>
+                <a href='{% url 'main:catalog' %}'><li>Catalogues</li></a>
+             <a href='{% url 'main:contact' %}'><li>Contact us</li></a>
+             <a href='{% url 'main:details' %}'><li>Contacts</li></a>
+
+
+
             </ul>
         </div>
     </div>

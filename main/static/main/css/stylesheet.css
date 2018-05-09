@@ -96,6 +96,14 @@ nav .search form input[type='submit']
 }
 @media (min-width: 0) and (max-width: 767px) {.navigation{display: none}}
 .navigation .main{display: flex;justify-content: space-around;margin: 0;text-align: center;}
+.navigation .main a{width: calc(100% / 6);
+    position: relative;
+    background: #131313; padding-top: 3px;
+    color: #FFF;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;}
 .navigation .main > li
 {   
     font-size: 0.85rem;
@@ -103,20 +111,36 @@ nav .search form input[type='submit']
     background:#FFF;
     /*padding: 5px 10px;*/
     padding: 5px 0;
-    width: calc(100% / 6);
+    height: 100%;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
-.navigation .main li:hover 
-{
-    background: #131313;
-}
+
 .navigation ul .cat-link
 {
-    position: relative
+	width: calc(100% / 6);
+    position: relative;
+	background : #131313;
+	margin : 0;
+	color: #FFF;
 }
+.navigation ul .cat-link i
+{
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+	position: absolute;
+    right: 35px;
+    top: 8px;
+}
+.navigation ul .cat-link:hover i
+{
+    transform: rotate(-90deg)
+}
+.navigation ul .cat-link:hover{background: #FFF; color: #131313}
 .navigation ul.sup-menu
 {
     position: absolute;
@@ -125,7 +149,7 @@ nav .search form input[type='submit']
     top: 30px;
     padding: 8px 0;
     display: none;
-    border-top: 5px solid #FFF;  
+    border-top: 5px solid #131313;
     /*-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -137,15 +161,9 @@ nav .search form input[type='submit']
 }*/
 .navigation ul.sup-menu li{padding: 5px 0 8px 10px}
 .navigation .sup-menu li:hover{background: #383838}
-.navigation ul a
-{
-    color: #131313;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
+
 .navigation .main li:hover a{color: #FFF}
+.navigation .main a:hover{background: #FFF; color: #131313}
 .navigation ul a:hover{text-decoration: none}
 /* Navigation */
 
@@ -418,6 +436,7 @@ nav .search form input[type='submit']
     .footer .footer-media
     {
         display: flex;
+        justify-content: center;
     }
     .footer .footer-media li
     {
@@ -426,7 +445,7 @@ nav .search form input[type='submit']
 }
 .footer .footer-media li
 {
-    padding-left: 10px
+    padding-right: 10px
 }
 .footer .footer-media li i:first-of-type{background: #f88a02}
 .footer .footer-media li:nth-of-type(2) i{background: #02549e}
@@ -588,6 +607,7 @@ nav .search form input[type='submit']
 .impression .type h4{font-size: 1.3rem}
 .impression .type p
 {
+	min-height: 57px;
     font-size: .8rem;
 }
 .impression .type .image
