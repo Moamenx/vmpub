@@ -21,7 +21,7 @@ body
     /*background: #000000;*/  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to top, #272727, #000000);*/  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to top, #272727, #000000);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: url(../images/bg.jpg) no-repeat fixed;
+    background: url(../images/bg.jpg) no-repeat;
     background-size: cover;
     height: 1vh
 }

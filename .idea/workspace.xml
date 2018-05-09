@@ -93,8 +93,8 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/static/main/css/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="536" column="57" lean-forward="false" selection-start-line="536" selection-start-column="57" selection-end-line="536" selection-end-column="57" />
+            <state relative-caret-position="149">
+              <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding>
                 <element signature="e#262#399#0" expanded="false" />
                 <element signature="e#428#693#0" expanded="false" />
@@ -168,6 +168,7 @@
       <find>@media (min-width: 0) and (max-width: 767px)</find>
       <find>mobSearch</find>
       <find>.product-page</find>
+      <find>background: url(../images/bg.jpg) no-repeat fixed;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -602,7 +603,7 @@
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
             <element signature="e#262#399#0" expanded="false" />
             <element signature="e#428#693#0" expanded="false" />
@@ -619,8 +620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/static/main/css/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="536" column="57" lean-forward="false" selection-start-line="536" selection-start-column="57" selection-end-line="536" selection-end-column="57" />
+        <state relative-caret-position="149">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding />
         </state>
       </provider>
