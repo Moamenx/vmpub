@@ -281,10 +281,16 @@ nav .search form input[type='submit']
     justify-content: center;
     align-items: center
 }
+.product .image .overlay .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 25px;
+}
 .product .image:hover .overlay
 {
     background: rgba(0, 0, 0, 0);
-}
+}	
 .product .image .overlay h4
 {
     position: absolute;
@@ -300,7 +306,7 @@ nav .search form input[type='submit']
 {
     top: 15px
 }
-.product .image .icons p{color: #444;}
+.product .image .icons p{color: #444; position: absolute; bottom: 60px;}
 .product .image .icons i{color: #F5F5F5}
 .product .image .icons p,
 .product .image .icons i
@@ -328,7 +334,6 @@ nav .search form input[type='submit']
     border-radius: 50%;
     font-size: 1.1rem;  
     position: relative;
-    left: 43%;
     margin-bottom: 15px;
 }
 .product .image:hover i
