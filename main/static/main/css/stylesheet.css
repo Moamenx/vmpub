@@ -22,6 +22,9 @@ body
     /*background: -webkit-linear-gradient(to top, #272727, #000000);*/  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to top, #272727, #000000);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: url(../images/bg.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     height: 1vh
 }
@@ -70,17 +73,6 @@ nav .search form input[type='search']
     border: 1px solid #F5F5F5;    
     color:#555;
     font-size: .9rem
-}
-nav .mob-search form input[type='search']
-{
-   background: transparent;
-    border: 1px solid #2f2f2f;
-    color: #CCC
-}
-nav .mob-search form input[type='submit']
-{
-   background: #000 !important;
-
 }
 ::placeholder{color: #d4d4d4;font-size: 1rem}
 nav .search form input[type='submit']
@@ -529,18 +521,24 @@ nav i
 /* =================================== CATEGORY PAGE =================================== */
 
 /* =================================== PRODUCT PAGE =================================== */
-.product-page{overflow: hidden;padding: 160px 0}
+.product-page{overflow: hidden;padding: 160px 10px}
 .product-page .row .col-md-8{padding: 0 !important}
 .product-page .image{width: 100%}
 .product-page .row .col-md-8 .desc{color: #FFF}
 .product-page .row .col-md-4{padding: 0 !important}
-.product-page .window .product .image{margin-bottom: 20px}
+.product-page .window .product .image{margin-bottom: 20px;border: 1px solid #333}
+.product-page .shuffle ul
+{
+    display: flex;
+    justify-content: center;    
+}
 .product-page .shuffle h4
 {
     color: #FFF;
     position: relative;    
+    font-size: 1.1rem;    
 }
-.product-page .shuffle h4:before,
+/*.product-page .shuffle h4:before,
 .product-page .shuffle h4:after
 {
     content: '';
@@ -552,11 +550,11 @@ nav i
     background: #FFF;   
 }
 .product-page .shuffle h4:before{left: 110px}
-.product-page .shuffle h4:after{right: 110px}
+.product-page .shuffle h4:after{right: 110px}*/
 .product-page .shuffle li
 {
     width: 150px;
-    margin: 10px auto;
+    margin-right: 5px;
     cursor: pointer
 }
 /* =================================== PRODUCT PAGE =================================== */
