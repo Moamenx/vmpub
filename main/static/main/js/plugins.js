@@ -48,7 +48,7 @@ $(function () {
     
     // Shuffle
     $(".product-page .shuffle li").click(function () {
-        $(this).parent().addClass('active').siblings().removeClass('active');
+        $(this).addClass('active').siblings().removeClass('active');
         $(".product-page .image > div").hide();
         $($(this).data('class')).show();
         console.log($(this).data('class'));
