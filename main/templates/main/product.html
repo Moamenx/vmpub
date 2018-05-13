@@ -13,8 +13,9 @@
                             <div class='img1 active'><img src='{{ product.photo.url }}' alt='product1' class='img-fluid' /></div>
                   {% if product_photos %}
                           {% for product_photo in product_photos %}
-                                
+                                {% if forloop.counter > 1 %}
                            <div class='img{{ forloop.counter1 }} hidden'><img src='{{ product_photo.photo.url }}' alt='product1' class='img-fluid' /></div>
+                                {% endif %}
                            {% endfor %}
                   {% endif %}
 
@@ -31,9 +32,9 @@
                             <li data-class='.img1' class='active'><img src='{{ product.photo.url }}' alt='' class='img-fluid' /></li>
                                 {% if product_photos %}
                                     {% for product_photo in product_photos %}
-                                
-                                     <li data-class='.img'><img src='{{ product_photo.photo.url }}' alt='' class='img-fluid' /></li>
-                                
+                                {% if forloop.counter > 1 %}
+                                     <li data-class='.img{{ forloop.counter1 }}'><img src='{{ product_photo.photo.url }}' alt='' class='img-fluid' /></li>
+                                        {% endif %}
                                     {% endfor %}
                                {% endif %}
                             </ul>

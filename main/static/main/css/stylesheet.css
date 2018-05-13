@@ -683,14 +683,16 @@ nav i
 /* =================================== PRODUCT PAGE =================================== */
 .product-page{overflow: hidden;padding: 160px 10px}
 .product-page .row .col-md-8{padding: 0 !important}
-.product-page .image{width: 100%}
+.product-page .row .col-md-8 .image img{width: 100%}
 .product-page .row .col-md-8 .desc{color: #FFF}
 .product-page .row .col-md-4{padding: 0 !important; max-width: 13.5333333% !important}
-.product-page .window .product .image{margin-bottom: 20px;border: 1px solid #333;height: auto}
-.product-page .shuffle ul
+.product-page .window .product .image{margin-bottom: 20px;border: 1px solid #333;height: auto;width: auto}
+@media (min-width: 0) and (max-width: 767px)
 {
-    display: flex;
-    align-items: center;
+    .product-page .shuffle ul
+    {
+        display: flex
+    }
 }
 .product-page .shuffle h4
 {
@@ -714,10 +716,14 @@ nav i
 .product-page .shuffle h4:after{right: 110px}*/
 .product-page .shuffle li
 {
-    width: 150px;
-    margin: 1px auto;
-    cursor: pointer
+    /*width: 150px;*/
+    margin: 1px auto 5px auto;
+    cursor: pointer;
 }
+/*@media (min-width: 0) and (max-width: 767px)
+{    
+    .product-page .shuffle li{margin-right: 10px}
+}*/
 .product-page .shuffle li.active
 {
     border: 2px solid #ffff51
