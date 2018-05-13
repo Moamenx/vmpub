@@ -2,6 +2,24 @@
 {% load static %}
 
 {% block content %}
+   
+   <!-- Start Testimonials -->
+
+    <div class='slider1'>
+            <div class="testimonials">
+                <ul class='list-unstyled'>
+                    <li class="box active"></li>
+                    <li class="box hidden"></li>
+                    <li class="box hidden"></li>
+                    <li class="box hidden"></li>
+                </ul>
+                <!--<i class="fa fa-angle-right fa-2x"></i>
+                <i class="fa fa-angle-left fa-2x"></i>-->
+            </div>
+    </div>
+    
+    <!-- End Testimonials -->
+   
     <!-- Special Header For Slider -->
     <div class='container'>
         <h3 class='special-header'>All Categories</h3>
@@ -45,8 +63,6 @@
         {% endfor %}
         </div>
 
-        </div>
-        </div>
         <i class="carousel-control-prev fa fa-chevron-left" href="#sugSlider" role="button" data-slide="prev">
             <span class="sr-only">ÇáÓÇÈÞ</span>
         </i>
@@ -57,15 +73,22 @@
     <!-- Mob Slider -->
     <div id="mobSlider" class="carousel slide category" data-ride="carousel">
         <div class="carousel-inner container">
-            <div class="carousel-item active">
+            {% for cat in cats %}
+ 
+                {% if forloop.first %}
+                  <div class="carousel-item active">
+                    {% else %}
+                    <div class="carousel-item">
+                {% endif %}
+ 
                 <!-- Start Of SugSlider Row -->
                 <div class='row'>
                     <div class='col'>
                         <!-- ********** Start Product ********** -->
-                        <a href='#'>
+                       <a href='{% url 'main:categories' cat_name=cat %}'>
                             <div class='product'>
                                 <div class='image'>
-                                    <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
+                                    <img src='{{ cat.photo.url }}' alt='{' class='img-fluid' />
                                     <div class='overlay'>
                                         <h4>{{ cat.name|title }}</h4>
                                         <div class='icons'>
@@ -80,32 +103,10 @@
                 </div>
                 <!-- End Of SugSlider Row -->
             </div>
-            <div class="carousel-item">
-                <!-- Start Of SugSlider Row -->
-                <div class='row'>
-                    <div class='col'>
-                        <!-- ********** Start Product ********** -->
-                        <a href='#'>
-                            <div class='product'>
-                                <div class='image'>
-                                    <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
-                                    <div class='overlay'>
-                                        <h4>{{ cat.name|title }}</h4>
-                                        <div class='icons'>
-                                            <p>{{ cat.name|title }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- ********** End Product ********** -->
-                    </div>
-                </div>
-                <!-- End Of SugSlider Row -->
-            </div>
+        {% endfor %}
             <!-- =============================================================== -->
         </div>
-        <i class="carousel-control-prev fa fa-chevron-left" href="#mobSlider" role="button" data-slide="prev">
+       <i class="carousel-control-prev fa fa-chevron-left" href="#mobSlider" role="button" data-slide="prev">
             <span class="sr-only">ÇáÓÇÈÞ</span>
         </i>
         <i class="carousel-control-next fa fa-chevron-right" href="#mobSlider" role="button" data-slide="next">
