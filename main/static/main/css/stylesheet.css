@@ -315,6 +315,85 @@ nav i
 {
     padding: 30px 0 0 0
 }
+/* Mob Slider */
+#mobSlider{display: none}
+#sugSlider1,
+#mobSlider
+{margin-bottom: 40px;padding: 0}
+#sugSlider1 .carousel-inner,
+#mobSlider .carousel-inner
+{overflow: hidden}
+#sugSlider1 .product ul li:nth-of-type(2) p,
+#mobSlider .product ul li:nth-of-type(2) p
+{
+    width: 172px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;    
+}
+/*#sugSlider1 .carousel-control-prev,
+#mobSlider .carousel-control-prev,
+#sugSlider1 .carousel-control-next,
+#mobSlider .carousel-control-next
+{
+    width: 3%;
+    background: #555;
+    top: 50%;
+    height: 10%;
+    border-radius: 50%;
+    opacity: .4;    
+}
+#sugSlider1 .carousel-control-prev,
+#mobSlider .carousel-control-prev
+{left: 25px;}
+#sugSlider1 .carousel-control-next,
+#mobSlider .carousel-control-next
+{right: 25px;}*/
+/*@media (min-width: 0) and (max-width: 767px)
+{
+    #sugSlider1 .carousel-control-prev,
+    #mobSlider .carousel-control-prev,
+    #sugSlider1 .carousel-control-next,
+    #mobSlider .carousel-control-next
+    {
+        top: 0;
+        width: 8%;
+        background: #555;
+        bottom: 10%;
+        height: 8%;
+        border-radius: 50%;
+        opacity: .7;
+    }
+}*/
+#sugSlider1 .product,
+#mobSlider .product
+{opacity: 1; transform: translate(0,0)}
+#sugSlider1 .carousel .product .image,
+#mobSlider .carousel .product .image
+{position: relative;text-align: center;margin: 10px auto 0 auto}
+#sugSlider1 .product .offer, 
+#mobSlider .product .offer 
+{
+    position: absolute;
+    top: 17px;
+    right: -13px;
+    color: #FFF;
+    background: #e02a2a;
+    width: 60px;
+    padding: 5px 11px;   
+}
+@media (min-width: 0) and (max-width: 767px)
+{
+    #sugSlider{display: none}
+    #mobSlider{display: block}
+}
+@media (min-width: 0) and (max-width: 767px) 
+{
+    i[href='#sugSlider']{display: none}
+}
+/* Suggest Slider 2 */
+/* Mob Slider */
 .product .image{position: relative;/* width: 350px*/}
 .product .image .overlay
 {
