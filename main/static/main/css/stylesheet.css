@@ -313,13 +313,18 @@ nav i
 .slider .box
 {
     background-size: cover;
-    height: 400px
+    height: 500px;
+    display: none
 }
-.slider .box:first-of-type{background: url('../images/1.jpg') fixed center 40%}
-.slider .box:nth-of-type(2){background: url('../images/2.jpg') fixed center 40%}
-.slider .box:nth-of-type(3){background: url('../images/3.jpg') fixed center 40%}
-.slider .box:nth-of-type(4){background: url('../images/4.jpg') fixed center 40%}
-.slider .box:last-of-type{background: url('../images/5.jpg') fixed center 40%}
+.slider .box.active
+{
+    display: block
+}
+/*.slider .box:first-of-type{background: url('../images/1.jpg') fixed center 70%}
+.slider .box:nth-of-type(2){background: url('../images/2.jpg') fixed center 70%}
+.slider .box:nth-of-type(3){background: url('../images/3.jpg') fixed center 70%}
+.slider .box:nth-of-type(4){background: url('../images/4.jpg') fixed center 70%}
+.slider .box:last-of-type{background: url('../images/5.jpg') fixed center 70%}*/
 
 /* End Slider */
 .hidden

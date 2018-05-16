@@ -36,7 +36,7 @@ class HomeView(View):
     template_name = 'main/indeex.html'
 
     def get(self, request):
-        context = {'news': get_news(), 'cats': Category.objects.all()}
+        context = {'news': get_news(), 'cats': Category.objects.all(), 'slide': SlideShow.objects.all()}
         return render(request, 'main/indeex.html', context)
 
     def post(self, request):

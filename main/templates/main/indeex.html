@@ -6,20 +6,13 @@
    <!-- Start  Auto Slider-->
         
         <div class="slider">
-            <div class="box active">
-            </div>
 
-            <div class="box hidden">
-            </div>
+         {% for pic in slide %}
 
-            <div class="box hidden">
-            </div>
+               <div class="box {% if forloop.first %}active{% endif %}" style="background: url('{{ pic.photo.url }}') fixed center -20%"></div>
+         {% endfor %}
 
-            <div class="box hidden">
-            </div>
 
-            <div class="box hidden">
-            </div> 
         </div>
         
     <!-- End Auto Slider -->
@@ -29,11 +22,13 @@
         <h3 class='special-header'>All Categories</h3>
     </div>
     <!-- Special Header For Slider -->
-        
-    <div id="sugSlider" class="carousel slide category" data-ride="carousel">
-        <div class="carousel-inner container">
-            {% for cat in cats %}
-             {% if forloop.first %}
+    <!-- Start SugSlider -->
+<div id="sugSlider" class="carousel slide category" data-ride="carousel">
+    <div class="carousel-inner container">
+
+        {% for cat in cats %}
+
+            {% if forloop.first %}
         <div class="carousel-item active">
             <div class="row">
                 {% elif forloop.counter0|divisibleby:"3" %}
@@ -41,24 +36,35 @@
                     <div class="row">
                         {% endif %}
                         <!-- Start Of SugSlider Row -->
-                    <div class='col'>
-                        <!-- ********** Start Product ********** -->
-                        <a href='{% url 'main:categories' cat_name=cat.name|space_to_dash %}'>
+
+                        <div class='col'>
+                            <!-- ********** Start Product ********** -->
                             <div class='product'>
-                                <div class='image'>
-                                    <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
-                                    <div class='overlay'>
-                                        <h4>{{ cat.name|title }}</h4>
-                                        <div class='icons'>
-                                            <p>{{ cat.name|title }}</p>
-                                        </div>
+                        <div class='image'>
+                                <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
+                                <div class='overlay'>
+                                    <div class='icons'>
+                                         <i class='fa fa-eye see' data-class='.product-modal{{ forloop.counter }}'></i>
+                                        <a href='#'><i class='fa fa-shopping-cart buy'></i></a>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <!-- ********** End Product ********** -->
-                    </div>
-                      {% if forloop.counter|divisibleby:"3" %}
+                                 <ul class='list-unstyled'>
+                                <li>{{offer.name}} <span class='offer-percentage pull-left'>35%</span></li>
+                                <li>
+                                    <p>{{offer.description}}</p>
+                                </li>
+                                <li>
+                                    <strike><p>{{ offer.price }} <span>AED</span></p></strike>
+                                    <p class='new-price'>{{ offer.discounted_price }} <span>AED</span></p>
+                                </li>
+                            </ul>
+                            <span class='offer'>عرض</span>
+                            </div>
+                            <!-- ********** End Product ********** -->
+                        </div>
+
+                {% if forloop.counter|divisibleby:"3" %}
               </div>
                 </div>
           {% endif %}
@@ -66,59 +72,26 @@
         {% endfor %}
         </div>
 
-        <i class="carousel-control-prev fa fa-chevron-left" href="#sugSlider" role="button" data-slide="prev">
-            <span class="sr-only">ÇáÓÇÈÞ</span>
-        </i>
-        <i class="carousel-control-next fa fa-chevron-right" href="#sugSlider" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-        </i>
     </div>
-    <!-- Mob Slider -->
-    <div id="mobSlider" class="carousel slide category" data-ride="carousel">
-        <div class="carousel-inner container">
-            {% for cat in cats %}
- 
-                {% if forloop.first %}
-                  <div class="carousel-item active">
-                    {% else %}
-                    <div class="carousel-item">
-                {% endif %}
- 
-                <!-- Start Of SugSlider Row -->
-                <div class='row'>
-                    <div class='col'>
-                        <!-- ********** Start Product ********** -->
-                       <a href='{% url 'main:categories' cat_name=cat %}'>
-                            <div class='product'>
-                                <div class='image'>
-                                    <img src='{{ cat.photo.url }}' alt='{' class='img-fluid' />
-                                    <div class='overlay'>
-                                        <h4>{{ cat.name|title }}</h4>
-                                        <div class='icons'>
-                                            <p>{{ cat.name|title }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- ********** End Product ********** -->
-                    </div>
-                </div>
-                <!-- End Of SugSlider Row -->
-            </div>
-        {% endfor %}
-            <!-- =============================================================== -->
-        </div>
-       <i class="carousel-control-prev fa fa-chevron-left" href="#mobSlider" role="button" data-slide="prev">
-            <span class="sr-only">ÇáÓÇÈÞ</span>
-        </i>
-        <i class="carousel-control-next fa fa-chevron-right" href="#mobSlider" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-        </i>
+    <a class="carousel-control-prev" href="#sugSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">السابق</span>
+    </a>
+    <a class="carousel-control-next" href="#sugSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
     </div>
-    <!-- Suggest Product Slider -->
-    <!-- Mob Slider -->
+
+
+
+
 {% endblock %}
+
+
+
+
 
 {% block aboutus %}
      <!-- About us -->

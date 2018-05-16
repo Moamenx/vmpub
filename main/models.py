@@ -52,3 +52,7 @@ class HotNew(models.Model):
 
     def __str__(self):
         return self.news[:25]
+
+
+class SlideShow(models.Model):
+    photo = models.FileField(null=False, upload_to=settings.MEDIA_ROOT + '/slide-show/')

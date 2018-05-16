@@ -35,5 +35,10 @@ def update_database():
         final = BASE_DIR + '/media/product-photos/' + name
         photo.photo = final
         photo.save()
+    for photo in SlideShow.objects.all():
+        name = photo.photo.name.split("/slide-show/")[1]
+        final = BASE_DIR + '/media/slide-show/' + name
+        photo.photo = final
+        photo.save()
 
 update_database()
