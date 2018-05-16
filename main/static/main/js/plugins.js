@@ -76,32 +76,36 @@ $(function () {
         aspectRatio: true
     });*/
     
-    // Our Auto Slider Code
-    (function selfSlider() {
-
-        $(".testimonials .active").each(function () {
-
-            if (!$(this).is(':last-child')) {
-
-                $(this).delay(1500).fadeOut(1000, function () {
-
-                    $(this).removeClass("active").next().addClass("active").fadeIn(1000);
-
-                    selfSlider();
-                });
-
-            } else {
-
+    // Auto Slider
+    
+    (function selfCall() {
+        
+        $(".slider .active").each(function () {
+        
+            if (!$(this).is(":last-child")) {
+           
                 $(this).delay(3000).fadeOut(1000, function () {
-
-                    $(this).removeClass("active");
-
-                    $(".testimonials ul li").eq(0).addClass("active").fadeIn(1000);
-
-                    selfSlider();
+                    
+                    $(this).removeClass("active").next().addClass("active").fadeIn(1000);
+                    
+                    selfCall();
                 });
+                
+            } else {
+                
+                $(this).delay(3000).fadeOut(1000, function () {
+                    
+                    $(this).removeClass("active");
+                    
+                    $(".slider div").eq(0).addClass("active").fadeIn(1000);
+                    
+                    selfCall();
+                });
+                
             }
+        
         });
+        
     }());
 
 });

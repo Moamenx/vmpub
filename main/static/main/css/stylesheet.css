@@ -299,83 +299,33 @@ nav i
 
 /* End Mobile Nav */
 
-/* Start Testimonials */
-.slider1{padding: 15px 0;}
-.testimonials
+/* Start Slider */
+
+.slider
 {
-    margin: 94px 0 140px 0;
-    background:url('../images/1.jpg');
-    background-size:cover;
-    background-attachment: fixed;
-    position: relative;
-    height: 250px;
-    text-align: center;
-    color:#FFF
+    background:#DDD
 }
-@media (min-width: 0) and (max-width: 767px) 
+.slider .overlay
 {
-    .testimonials{height: 0}
+    height: 100%;
+    width:100%;
 }
-.testimonials ul{padding: 0}
-.testimonials .box{padding:60px 0}
-.testimonials .box img{border-radius:50%;width:170px;height:170px}
-.slider1 .testimonials ul li:first-of-type {
-    background: url(../images/1.jpg) fixed no-repeat center center;
-    background-size: cover;
-    height: 410px;
-}
-
-.slider1 .testimonials ul li:nth-of-type(2) {
-    background: url(../images/2.jpg) fixed no-repeat center center;
-    background-size: cover;
-    height: 410px;
-}
-
-.slider1 .testimonials ul li:nth-of-type(3) {
-    background: url(../images/3.jpg) fixed no-repeat center center;
-    background-size: cover;
-    height: 410px;
-}
-
-.slider1 .testimonials ul li:last-of-type {
-    background: url(../images/4.jpg) fixed no-repeat center center;
-    background-size: cover;
-    height: 410px;
-}
-@media (min-width: 0) and (max-width: 767px) /* MEDIA OF LI SLIDER*/
+.slider .box
 {
-    .slider1 .testimonials ul li:first-of-type {
-        background: url(../images/1.jpg) fixed no-repeat center center;
-        background-size: cover;
-        height: 200px;
-    }
-    .slider1 .testimonials ul li:nth-of-type(2) {
-        background: url(../images/2.jpg) fixed no-repeat center center;
-        background-size: cover;
-        height: 200px;
-    }
-    .slider1 .testimonials ul li:nth-of-type(3) {
-        background: url(../images/3.jpg) fixed no-repeat center center;
-        background-size: cover;
-        height: 200px;
-    }
-    .slider1 .testimonials ul li:last-of-type {
-        background: url(../images/4.jpg) fixed no-repeat center center;
-        background-size: cover;
-        height: 200px;
-    }
+    background-size: cover;
+    height: 400px
 }
-/* MEDIA OF LI SLIDER*/
-/*.testimonials .box p{font-size:18px;font-style: italic;margin:30px 0;color:#d8d8d8}
-.testimonials .box span{display: inline-block;margin-top:10px}
-.testimonials .fa-angle-right,
-.testimonials .fa-angle-left{position:absolute;top:50%;color:#b5b5b5;cursor: pointer;font-size: 3em}
-.testimonials .fa-angle-right{right: 20px}
-.testimonials .fa-angle-left{left: 20px}
-.testimonials .fa-angle-right:hover,
-.testimonials .fa-angle-left:hover{color:#CCC}*/
-/* End Testimonials */
+.slider .box:first-of-type{background: url('../images/1.jpg') fixed center 40%}
+.slider .box:nth-of-type(2){background: url('../images/2.jpg') fixed center 40%}
+.slider .box:nth-of-type(3){background: url('../images/3.jpg') fixed center 40%}
+.slider .box:nth-of-type(4){background: url('../images/4.jpg') fixed center 40%}
+.slider .box:last-of-type{background: url('../images/5.jpg') fixed center 40%}
 
+/* End Slider */
+.hidden
+{
+    display: none
+}
 /* Slider */
 .special-header{padding-top: 60px;padding-left: 20px; color:#FFF;position: relative}
 .special-header:before
@@ -685,7 +635,10 @@ nav i
 .product-page .row .col-md-8{padding: 0 !important}
 .product-page .row .col-md-8 .image img{width: 100%}
 .product-page .row .col-md-8 .desc{color: #FFF}
-.product-page .row .col-md-4{padding: 0 !important; max-width: 13.5333333% !important}
+@media (min-width: 768px)
+{
+    .product-page .row .col-md-4{padding: 0 !important; max-width: 13.5333333% !important}
+}
 .product-page .window .product .image{margin-bottom: 20px;border: 1px solid #333;height: auto;width: auto}
 @media (min-width: 0) and (max-width: 767px)
 {
