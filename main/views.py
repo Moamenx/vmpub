@@ -97,8 +97,11 @@ class CategoryView(View):
     def get(self, request, cat_name):
         product_photos = None
         products = Product.objects.all()
+        catName = cat_name
+        if '-' in catName:
+            catName = cat_name.replace('-', ' ')
         try:
-            category = Category.objects.get(name=cat_name)
+            category = Category.objects.get(name=catName)
         except Category.DoesNotExist:
             category = None
         try:
@@ -108,7 +111,7 @@ class CategoryView(View):
             products = None
             product_photos = None
 
-        context = {'category_name': cat_name, 'product_photos': product_photos, 'products': products,
+        context = {'category_name': catName, 'product_photos': product_photos, 'products': products,
                    'cats': Category.objects.all()}
         return render(request, 'main/category.html', context)
 
@@ -118,9 +121,12 @@ class ProductView(View):
 
     def get(self, request, cat_name, product_name):
         context = {}
-        if Product.objects.all().filter(name=product_name).exists():
+        productName = product_name
+        if '-' in productName:
+           productName = product_name.replace('-', ' ')
+        if Product.objects.all().filter(name=productName).exists():
             try:
-                product = Product.objects.get(name=product_name)
+                product = Product.objects.get(name=productName)
                 product_photos = ProductPhoto.objects.all().filter(product=product)
             except (Product.DoesNotExist, ProductPhoto.DoesNotExist):
                 product_photos = None

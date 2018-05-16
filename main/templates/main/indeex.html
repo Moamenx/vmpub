@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
+{% load url_mods %}
 {% block content %}
    
    <!-- Start  Auto Slider-->
@@ -33,7 +33,6 @@
     <div id="sugSlider" class="carousel slide category" data-ride="carousel">
         <div class="carousel-inner container">
             {% for cat in cats %}
-
              {% if forloop.first %}
         <div class="carousel-item active">
             <div class="row">
@@ -44,7 +43,7 @@
                         <!-- Start Of SugSlider Row -->
                     <div class='col'>
                         <!-- ********** Start Product ********** -->
-                        <a href='{% url 'main:categories' cat_name=cat %}'>
+                        <a href='{% url 'main:categories' cat_name=cat.name|space_to_dash %}'>
                             <div class='product'>
                                 <div class='image'>
                                     <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
