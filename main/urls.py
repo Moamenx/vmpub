@@ -4,7 +4,8 @@ from django.contrib import admin
 app_name = 'main'
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
-     url(r'impression/', ImpressionView.as_view(), name='impression'),
+    url(r'impression/', ImpressionView.as_view(), name='impression'),
+    url(r'search/', SearchView.as_view(), name='search'),
     url(r'catalog/', CatalogView.as_view(), name='catalog'),
     url(r'details/', DetailsView.as_view(), name='details'),
     url(r'contact-us/', ContactUsView.as_view(), name='contact'),

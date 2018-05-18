@@ -42,6 +42,15 @@ class HomeView(View):
     def post(self, request):
         pass
 
+class SearchView(View):
+    template_name = 'main/search.html'
+
+    def get(self, request):
+        context = {'news': get_news(), 'cats': Category.objects.all()}
+        return render(request, 'main/search.html', context)
+
+    def post(self, request):
+        pass
 
 class DetailsView(View):
     template_name = 'main/details.html'
