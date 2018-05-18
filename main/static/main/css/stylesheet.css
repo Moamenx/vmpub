@@ -796,4 +796,21 @@ nav i
 .catalog .row{margin-bottom: 75px}
 .catalog .row .text{color: #FFF}
 /* =================================== CATALOG PAGE =================================== */
+
+/* =================================== SEARCH PAGE =================================== */
+.result{padding: 160px 0 0 0;width: 900px;margin: 0 10px 0 50px}
+.result .row{margin-bottom: 30px}
+@media (min-width: 0) and (max-width: 767px)
+{
+    .result
+    {
+        width: auto;
+    }
+    .result .text{margin-top: 15px}
+}
+.result .text a{color: #e6e6e6}
+.result .text h4{font-size: 1.4rem;text-decoration: underline}
+.result .text p{color: #d0d0d0;font-size: .8rem}
+.result hr{border-top: 1px solid rgba(255, 255, 255, 0.07)}
+/* =================================== SEARCH PAGE =================================== */
 .hidden{display: none}
