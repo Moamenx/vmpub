@@ -15,7 +15,7 @@
         </div>
         <div class='mob-search search'>
            <img src='../../static/main/images/1.gif' />
-            <form action="" method="">
+           <form action="{% url 'main:search' %}" method="POST">
                 <input type="search" name='filter' class='' placeholder='Search'/>
                 {% csrf_token %}
                 <input type='submit' name='submit' value='&#xf002;' class='btn btn-success' />
