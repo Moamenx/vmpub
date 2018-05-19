@@ -45,12 +45,28 @@ class HomeView(View):
 class SearchView(View):
     template_name = 'main/search.html'
 
-    def get(self, request):
-        context = {'news': get_news(), 'cats': Category.objects.all()}
-        return render(request, 'main/search.html', context)
 
     def post(self, request):
-        pass
+        msg = request.POST.get('filter')
+        if msg == "":
+            context = {'news': get_news(), 'cats': Category.objects.all(), 'result': None}
+            return render(request, 'main/search.html', context)
+        product_result = []
+        category_result = []
+        filtered_msg = msg.lower().replace(' ', '')
+        for p in Product.objects.all():
+            if p.name.replace(' ', '').lower().__contains__(filtered_msg) or p.description.replace(' ', '').lower().__contains__(filtered_msg):
+                product_result.append(p)
+        for cat in Category.objects.all():
+            if cat.name.replace(' ','').lower().__contains__(filtered_msg):
+                category_result.append(cat)
+        for cat in category_result:
+            print(cat.name)
+        for p in product_result:
+            print(p.name)
+        context = {'news': get_news(), 'cats': Category.objects.all(), 'msg': msg, 'result':product_result}
+        return render(request, 'main/search.html', context)
+
 
 class DetailsView(View):
     template_name = 'main/details.html'
