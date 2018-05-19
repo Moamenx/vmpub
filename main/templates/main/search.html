@@ -24,7 +24,10 @@
         </div>
             {% endfor %}
             {% else %}
-             <p class='notExist'>No match found.</p>
+            <div class="search-failed">
+                <i class='fa fa-search'></i>
+                 <p class='notExist'>No match found.</p>
+            </div>
         {% endif %}
        <!-- Loop on row -->
     </div>

@@ -815,4 +815,41 @@ nav i
 /* =================================== SEARCH PAGE =================================== */
 .hidden{display: none}
 .floatingFooter{margin-top: 250px}
-.notExist{color: #ca5858;margin-left: 15px}
+.notExist
+{
+    color: #FFF;
+    font-size: 1.2rem;
+}
+.search-failed
+{
+    margin: auto;
+    position: relative; 
+}
+.search-failed i
+{
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    top: 11px;
+    left: 21px;    
+}
+.search-failed p
+{
+    color: #FFF;
+    font-size: 1.2rem;
+    background: #333;
+    width: 60%;
+    padding: 10px 50px;
+    border-left: 10px solid #8e2020;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 1px solid #FFF;  
+    
+}
+@media (min-width: 0) and (max-width: 767px)
+{
+    .search-failed p{width: 100%}
+}
