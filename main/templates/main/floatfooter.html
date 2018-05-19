@@ -1,0 +1,70 @@
+{% load static %}
+<!-- Footer -->
+{% block footer %}
+    <!-- Footer -->
+    <div class='footer floatingFooter'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <a href='#' target="_blank"><img src='{% static 'main/images/gif.gif' %}' alt='logo' class='img-fluid flogo' /></a>
+                </div>
+                <div class='col-md-4'>
+                    <ul class='sitemap list-unstyled row'>
+                        <div class='col-6'>
+                            <li>
+                                Sitemap
+                            </li>
+                            <li class="active">
+                                <a href="{% url 'main:home' %}">Accueil <span class="sr-only">(current)</span></a>
+                            </li>
+                            {% for cat in categories %}
+                            <li>
+                                <a href="{% url 'main:categories' cat_name=cat %}">{{ cat|title }}</a>
+                            </li>
+                            {% endfor %}
+                           
+                        </div>
+                        <div class='col-6'>
+                            <li>
+                                <a href="{% url 'main:catalog' %}">Catalogues</a>
+                            </li>
+							 <li>
+                                <a href="{% url 'main:impression' %}">Impression</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'main:contact' %}">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'main:details' %}">Contacts</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class='col-md-4'>
+                    <div class='footer-brand'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <ul class='footer-media list-unstyled'>
+                            <li><i class='fa fa-rss'></i></li>
+                            <li><i class='fa fa-instagram'></i></li>
+                            <li><i class='fa fa-youtube-play'></i></li>
+                            <li><i class='fa fa-twitter'></i></li>
+                            <li><i class='fa fa-snapchat'></i></li>
+                            <li><i class='fa fa-facebook'></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'main/js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'main/js/popper.min.js' %}"></script>
+    <!-- Javascript Tooltip library -->
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <script src='{% static  'main/js/plugins.js'%}'></script>
+{% endblock %}

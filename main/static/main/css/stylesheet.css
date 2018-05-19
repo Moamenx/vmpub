@@ -814,3 +814,5 @@ nav i
 .result hr{border-top: 1px solid rgba(255, 255, 255, 0.07)}
 /* =================================== SEARCH PAGE =================================== */
 .hidden{display: none}
+.floatingFooter{margin-top: 250px}
+.notExist{color: #ca5858;margin-left: 15px}

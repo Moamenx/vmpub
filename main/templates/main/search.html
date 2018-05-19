@@ -24,7 +24,7 @@
         </div>
             {% endfor %}
             {% else %}
-             <h4>No match found.</h4>
+             <p class='notExist'>No match found.</p>
         {% endif %}
        <!-- Loop on row -->
     </div>
@@ -32,3 +32,10 @@
 <!-- Search Result -->
 
 {% endblock %}
+
+{%if products%}
+{%else%}
+{% block footer%}
+{% include 'main/floatfooter.html' %}
+{% endblock %}
+{%endif%}
