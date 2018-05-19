@@ -39,9 +39,12 @@
     <!-- Categories -->
 {% endblock %}
 
-{%if products%}
-{%else%}
+
 {% block footer%}
+    {%if products%}
+        {% include 'main/footer.html' %}
+{%else%}
 {% include 'main/floatfooter.html' %}
+    {%endif%}
 {% endblock %}
-{%endif%}
+

@@ -1,5 +1,6 @@
 {% load static %}
 {% load menu  %}
+{% load url_mods %}
 {% block navbar %}
     <!-- Navigation -->
     <nav>
@@ -35,7 +36,7 @@
                     <ul class='list-unstyled sup-menu'>
 
                      {% for cat in categories %}
-                         <a href='{% url 'main:categories' cat_name=cat %}'><li>{{ cat|title }}</li></a>
+                         <a href='{% url 'main:categories' cat_name=cat|space_to_dash %}'><li>{{ cat|title }}</li></a>
 
                      {% endfor %}
 

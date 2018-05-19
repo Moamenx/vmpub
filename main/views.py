@@ -53,9 +53,9 @@ class SearchView(View):
             return render(request, 'main/search.html', context)
         product_result = []
         category_result = []
-        filtered_msg = msg.lower().replace(' ', '')
+        filtered_msg = msg.lower()
         for p in Product.objects.all():
-            if p.name.replace(' ', '').lower().__contains__(filtered_msg) or p.description.replace(' ', '').lower().__contains__(filtered_msg):
+            if p.name.lower().__contains__(filtered_msg) or p.description.lower().__contains__(filtered_msg):
                 product_result.append(p)
         for cat in Category.objects.all():
             if cat.name.replace(' ','').lower().__contains__(filtered_msg):
