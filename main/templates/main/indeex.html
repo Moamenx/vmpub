@@ -23,7 +23,8 @@
     </div>
     <!-- Special Header For Slider -->
     <!-- Start SugSlider -->
-<div id="sugSlider" class="carousel slide category" data-ride="carousel">
+
+    <div id="sugSlider" class="carousel slide category" data-ride="carousel">
     <div class="carousel-inner container">
 
         {% for cat in cats %}
@@ -37,30 +38,21 @@
                         {% endif %}
                         <!-- Start Of SugSlider Row -->
 
-                        <div class='col'>
+                        <div class='col-md-4'>
                             <!-- ********** Start Product ********** -->
-                            <div class='product'>
-                        <div class='image'>
-                                <img src='{{ cat.photo.url }}' alt='product1' class='img-fluid' />
+                          <a href='{% url 'main:categories' cat_name=cat.name|space_to_dash %}'>
+                        <div class='product'>
+                            <div class='image'>
+                                <img src='{{ cat.photo.url }}' alt='product img' class='img-fluid' />
                                 <div class='overlay'>
+                                    <h4>{{ cat.name|title }}</h4>
                                     <div class='icons'>
-                                         <i class='fa fa-eye see' data-class='.product-modal{{ forloop.counter }}'></i>
-                                        <a href='#'><i class='fa fa-shopping-cart buy'></i></a>
+                                        <p>{{ cat.name|title }}</p>
                                     </div>
                                 </div>
                             </div>
-                                 <ul class='list-unstyled'>
-                                <li>{{offer.name}} <span class='offer-percentage pull-left'>35%</span></li>
-                                <li>
-                                    <p>{{offer.description}}</p>
-                                </li>
-                                <li>
-                                    <strike><p>{{ offer.price }} <span>AED</span></p></strike>
-                                    <p class='new-price'>{{ offer.discounted_price }} <span>AED</span></p>
-                                </li>
-                            </ul>
-                            <span class='offer'>عرض</span>
-                            </div>
+                        </div>
+                    </a>
                             <!-- ********** End Product ********** -->
                         </div>
 
@@ -75,7 +67,7 @@
     </div>
     <a class="carousel-control-prev" href="#sugSlider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">السابق</span>
+        <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#sugSlider" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
