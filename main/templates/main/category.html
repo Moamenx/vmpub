@@ -14,7 +14,7 @@
                         <div class="col-md-4">
                             <a href='{% url 'main:products' cat_name=category_name|space_to_dash product_name=product.name|space_to_dash %}'>
                                 <div class='product'>
-                                    <div class='image'>
+                                    <div class='image fixImage'>
                                         <img src='{{ product.photo.url }}' alt='product1' class='img-fluid' />
                                         <div class='overlay'>
                                             <div class='icons'>

@@ -8,8 +8,12 @@
         <div class="slider">
 
          {% for pic in slide %}
-
+            {% if windowWidth > 768 %}
                <div class="box {% if forloop.first %}active{% endif %}" style="background: url('{{ pic.photo.url }}') fixed center -20%"></div>
+             {% else %}
+                <div class="box {% if forloop.first %}active{% endif %}" style="background: url('{{ pic.photo.url }}') fixed center 35%"></div>
+            
+             {% endif %}
          {% endfor %}
 
 

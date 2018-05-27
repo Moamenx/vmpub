@@ -16,6 +16,7 @@ html
     background-repeat: repeat;
     background-attachment: scroll;    
 }
+@media (min-width: 0) and (max-width: 767px){html{background-image: none;background-color: /*#080808*/#0c0c0c}}
 body
 {
     /*background: #000000;*/  /* fallback for old browsers */
@@ -316,6 +317,7 @@ nav i
     height: 500px;
     display: none
 }
+.slider .box.mobSlideShow{background-position: center 35%}
 .slider .box.active
 {
     display: block
@@ -853,3 +855,4 @@ nav i
 {
     .search-failed p{width: 100%}
 }
+.product .image.fixImage{width: auto;height: auto}

@@ -108,4 +108,9 @@ $(function () {
         
     }());
 
+    /* Return Window width */
+    function windowWidth() {
+        return window.innerWidth;
+    }
+
 });
