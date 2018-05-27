@@ -18,7 +18,7 @@
                         <h4 style="color: #491217">{{ imp.title }}</h4>
                         <p>{{ imp.description }}</p>
                         <div class='image'>
-                            <img src='{% static 'main/images/1.jpg'%}' alt='' class='img-fluid' />
+                            <img src='{{ imp.photo.url }}' alt='' class='img-fluid' />
                         </div>
                     </div>
                 </div>
