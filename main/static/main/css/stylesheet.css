@@ -379,6 +379,15 @@ nav i
     text-overflow: ellipsis;
     font-size: 0.9rem;    
 }
+#sugSlider .carousel-control-next,
+#sugSlider .carousel-control-prev
+{
+    background: #FFF;
+    color: #000;
+    height: 15%;
+    top: 50%;
+    width: 35px;
+}
 #mobSlider .carousel-control-next,
 #mobSlider .carousel-control-prev
 {
@@ -387,7 +396,7 @@ nav i
     top: 50%;
     width: 35px;
 }
-#mobSlider .carousel-control-next{right: 0}
+#mobSlider .carousel-control-next{right: 0;}
 #mobSlider .carousel-control-prev{left: 0}
 #sugSlider1 .product,
 #mobSlider .product
@@ -414,6 +423,11 @@ nav i
 @media (min-width: 0) and (max-width: 767px) 
 {
     i[href='#sugSlider']{display: none}
+}
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon
+{
+    background-image: none !important
 }
 /* Suggest Slider 2 */
 /* Mob Slider */
