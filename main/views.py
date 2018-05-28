@@ -111,7 +111,7 @@ class ContactUsView(View):
         # if name and message and phone!= "":
         send_mail("VMPUB - "+ subject,
                   "Name: " + name + "\n" + "Contact Email: " + email + "\n" + "\n" + "Message: " + message,
-                  settings.EMAIL_HOST_USER, ['20140165@fa-hists.edu.eg'], fail_silently=False)
+                  settings.EMAIL_HOST_USER, ['isiskheresto@hotmail.com'], fail_silently=False)
         messages.success(request, 'Thank you for sending us an email!')
         return render(request, 'main/contact.html')
 
