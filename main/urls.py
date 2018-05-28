@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'search/', SearchView.as_view(), name='search'),
     url(r'catalog/', CatalogView.as_view(), name='catalog'),
     url(r'details/', DetailsView.as_view(), name='details'),
-    url(r'contact-us/', ContactUsView.as_view(), name='contact'),
+    url(r'contactez-nous/', ContactUsView.as_view(), name='contact'),
     url(r'^category/(?P<cat_name>[\w|\W]+)/', CategoryView.as_view(), name='categories'),
     url(r'^products/(?P<cat_name>[\w|\W]+)/(?P<product_name>[\w|\W]+)/', ProductView.as_view(), name='products'),
 
